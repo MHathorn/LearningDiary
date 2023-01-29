@@ -16,9 +16,16 @@
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "2  Overview",
     "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+    "text": "Learning Diary for CASA0023.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "3  about",
+    "section": "",
+    "text": "About me"
   },
   {
     "objectID": "references.html",

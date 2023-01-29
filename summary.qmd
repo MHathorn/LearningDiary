@@ -1,6 +1,6 @@
-# Summary
+# Overview
 
-In summary, this book has no content whatsoever.
+Learning Diary for CASA0023.
 
 ```{r}
 1 + 1
