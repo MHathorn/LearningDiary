@@ -4,4 +4,6 @@ Learning Diary for CASA0023.
 
 ```{r}
 1 + 1
+
+
 ```

@@ -1,0 +1,59 @@
+---
+title: "Week 1"
+---
+
+# Summary
+
+## What is remote sensing?
+
+This week, we covered an intro to remote sensing. Remote sensing is a subset of Geographic Information Science (GIS), and broadly refers to the science (and art) of using remote instruments -- sensors mounted on satellites or planes -- to record information remotely. One formal definition is
+
+> Photogrammetry and remote sensing are the art, science, and technology of obtaining reliable information about physical objects and the environment, through the process of recording, measuring and interpreting imagery and digital representations of energy patterns derived from non-contact sensor systems **(Colwell, 1997)**.
+
+## **Active and passive sensors**
+
+XXX
+
+**Passive sensors**
+
+-   Source, load and articulate the differences between Landsat and Sentinel data
+
+    -   **Landsat: xxx**
+
+    -   **Sentinel: xxx**
+
+-   Undertake basic raster image statistics and processing
+
+-   Evaluate the (dis)advantages of each type of software you have used
+
+-   Pull out and statistically compare spectral signatures
+
+## 
+Remote sensing resolutions
+
+Remote sensing data has four resolutions, namely:
+
+### 
+Spectral
+
+### Spatial
+
+### Temporal
+
+### Radiometric
+
+# Applications
+
+The most exciting applications for remote sensing data are in situations where traditional forms of data collection -- such as a national census -- are unreliable or out of date. This is true of South Africa, where obtaining up-to-date demographic or economic information is very difficult. This has led to one private sector company effectively cornering the market on spatial
+
+## Sensors
+
+Landsat, SENTINEL
+
+## Areas extracted
+
+# Reflections
+
+My first impression was how *long* a lot of this takes. Working with the raster data in SNAP and then processing it in R is conv
+
+I've got experience in photography from my previous career, so it was also interesting to interact with large raster files in a completely different way, and to play around with histograms from the electromagnetic spectrum.
