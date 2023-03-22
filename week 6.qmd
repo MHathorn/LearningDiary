@@ -1,0 +1,48 @@
+---
+title: "week 6"
+bibliography: references.bib
+---
+
+# Week 6: Classification 1
+
+## Summary
+
+This week we got into machine learning with Google Earth Engine.
+
+We covered a range of **supervised** machine learning tools -- from simple linear regression (which is a very basic form of supervised learning) to Classification and Regression Trees (CART) and Random Forests. Earth Engine lets you run all of these methods in just a few lines of code, and they provide a very good way to predict or classify what is happening in an area using remotely sensed data.
+
+### CART
+
+CART works by subsetting the data in a series of forks. Each fork is split into a predictor variable and each node has a prediction at the end, as shown below:
+
+![https://www.geeksforgeeks.org/cart-classification-and-regression-tree-in-machine-learning/](images/CARTClassificationAndRegressionTree.jpg)
+
+CART can be used on both categorical (classification), as well as continuous (regression) outcome variables. The algorithm splits the data in order to minimise the variance (the mean square error for continuous data and the gini impurity for categorical data) in each split.
+
+In the case of categorical variables, the value for each subset is the majority class of the response variable falling into that category; in the case of continuous data, the output is the mean of the records in the subset.
+
+**RF**
+
+From LR to CART, RF, etc
+
+How classified data is used
+
+How to classify remotely sensed data
+
+## Applications
+
+Nightlights paper india?
+
+LCLU, what else?
+
+Illegal logging
+
+Urban expansion?
+
+Forest fires - canonical example
+
+## Reflections
+
+Very powerful - but lack of explainability a limitation, especially in a policy context
+
+Covered these techniques elsewhere, but in a mostly theoretical context. Very interesting to see how they can actually be applied to remotely sensed data. Spatial resolution of most freely available imagery is a concern for most urban applications - difficult to differentiate between land uses within an area for example, as most buildings will be significantly smaller than the resolution of the pixels.

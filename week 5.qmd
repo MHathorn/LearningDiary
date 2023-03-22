@@ -1,0 +1,56 @@
+---
+title: "week 5"
+bibliography: references.bib
+---
+
+# Week 5: Google Earth Engine
+
+## Summary
+
+This week we dived into Google Earth Engine, which has dramatically accelerated the field of remote sensing. I have to say that it was a relief to start using Earth Engine -- I found the process of having to manually download and process images in SNAP or QGIS cumbersome and time-consuming. That's the main advantage of Earth Engine: the fact that it dramatically reduces processing time and eases computational resources.
+
+This week we covered "reducing" -- essentially, aggregation functions to provide a particular value (such as the median) for each pixel, as well as linear regression and spatial joins. We also ran PCA, which was eye-opening after week three when I ran PCA in R. Then I started the process and went out for a run to let it finish. This time, it just ran easily in a few seconds:
+
+**Insert video here**
+
+And here's the NDVI for Cape Town using landsat imagery from XX to XX:
+
+![](images/NDVI_GEE.jpg)
+
+And the GLCM texture measure from the same imagery:
+
+![](images/GLCM_GEE.jpg)
+
+And finally the first principal component from PCA:
+
+![](images/PC1_GEE.jpg)
+
+### Setup
+
+XXX
+
+### 
+
+## Applications
+
+The applications for Google Earth Engine are really limitless! Earth Engine really changed things by making remote sensing analysis faster and more accessible (you don't have to download huge amounts of data and then spend ages processing giant raster files). So the applications are not necessarily different to what was possible before, but it has really opened up the scale and creativity of analysis.
+
+![GEE applications](images/amani7-3021052-large.gif)
+
+https://ieeexplore.ieee.org/document/9184118
+
+![](images/Screenshot%202023-03-21%20172752.jpg)
+
+PCA - very quick
+
+## Reflections
+
+Analysis ready data?
+
+Easy to use - removes barriers to entry
+
+Javascript?
+
+Risks: Google takes away (ie GSV?)
+
+Limitations: lack of phase data, aggregates of some information (ie night lights)

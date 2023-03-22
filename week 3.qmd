@@ -1,0 +1,52 @@
+---
+title: "Week 3"
+bibliography: references.bib
+---
+
+# Week 3: Enhancements
+
+## Summary
+
+There are many different types of correction and enhancement possible for remote sensing. Corrections typically are typically applied to remove flaws created by the sensor, atmosphere, or terrain. However, for the purpose of this week, I am going to focus on a couple of enhancements of remote sensing imagery -- namely **Ratio, Texture**, and **Principal Component Analysis (PCA)**.
+
+### Ratio: Normalised Difference Vegetation Index (NDVI)
+
+Ratio enhancements use the different spectral signatures of different materials in spectral bands to exaggerate specific features. NDVI uses red and near-infrared spectral bands to draw out healthy vegetation, because healthy vegetation reflects highly in the near infrared wavelength and is absorbed in the red red one. Areas with a high NDVI index represent healthy vegetation.
+
+The image below shows the NDVI for Cape Town in XXX. It's a bit hard to read because of the ocean:
+
+![Normalised Difference Vegetation Index for Cape Town](images/ndviplotm1.png)
+
+We can get around this by utilising only NDVI values over 0.15. Here the healthy vegetation in the farmland to the North of the city is emphasised. Interestingly, areas that are mountainous or national parks do not register on the NDVI. This may be because of **XX, or YY**:
+
+![NDVI for Cape Town (only showing values above 1.5)](images/ndviplotveg.png)
+
+### Texture
+
+Texture is pretty cool. Essentially, it's a measure of each pixel's similarity (or difference) to the pixels around it. For example, the image below shows homogeneity for Cape Town. It's calculated using a grey-level co-occurrence matrix (GLCM). This involves creating a matrix for all pixels and their neighbours in an image, and calculating how homogeneous (similar) each pixel is to its neighbours. In the image below, areas with high homogeneity (the ocean, stretches of agricultural land in the north) are white, while areas with significant contrast (such as the coastline) are dark, due to the high contrast between the ocean and beaches.
+
+![Texture (homogeneity) for Cape Town](images/texture.png)
+
+### PCA
+
+![PCA for Cape Town](images/pca.png)
+
+## Applications
+
+Of the three techniques I have described above, NDVI probably has the most obvious practical application. It's easy to see how a vegetation index can be useful for monitoring and predicting crop yields, fire hazards, and **XXX**. The examples I've given for texture analysis and PCA are less clear in their immediate use, but that doesn't mean they aren't extremely powerful. Texture can, for example, be used for change detection (LINK) or to classify different land uses. This video, particularly from 17:38 to **XXX**, discusses some applications of texture in remote sensing data:
+
+{{< video https://youtu.be/GGejk18Fqhc >}}
+
+17:38 PCA can be used for a variety of remote sensing applications, such as feature extraction, change detection, and classification.
+
+Other applications include estimating the roughness of soil, as this study does:
+
+[Spatial estimation of surface soil texture using remote sensing data (tandfonline.com)](https://www.tandfonline.com/doi/pdf/10.1080/00380768.2013.802643)
+
+And using texture for feature classification when spectral data may be unreliable:
+
+[Microsoft Word - paperISPRS_04.doc](https://www.isprs.org/proceedings/XXXV/congress/comm4/papers/508.pdf) (PULL THE TABLE OUT MAYBE?)
+
+## Reflections
+
+First encountered PCA last term in the Foundations of Spatial Data Science module. It was quite intimidating then and I really didn't know how to make sense of it. Now it makes a bit more conceptual sense, and it's exciting to see all of the different ways that it can be applied. Similarly, I had never encountered texture analysis before, but it's really interesting to see how

@@ -1,0 +1,56 @@
+---
+title: "week 7"
+bibliography: references.bib
+---
+
+# Week 7: Classification - The Big Questions
+
+## Summary
+
+This week we continued with more classification algorithms in GEE. We focused on object-based image analysis and sub-pixel analysis, which I will describe below.
+
+### Object-based Image Analysis
+
+This uses a clustering algorithm -- one of the most common is Simple Linear Iterative Clustering (SLIC) -- to identify areas that are similar to each other and create shapes of similar (homogeneous) or different (heterogeneous) 'superpixels'.
+
+### Sub-pixel Analysis
+
+This determines the proportion of each landcover type per pixel. Essentially, it works by comparing the reflectance values in each pixel to the 'ideal' values of a spectrally pure endmember for that landcover class -- these values are arrived at through **LABORATORY MEASUREMENTS OR??**
+
+### Accuracy
+
+There are a number of ways to measure the accuracy of a model in remote sensing and machine learning. Which measure (or combination of measures) you choose depends on the application.
+
+Binary confusion matrix
+
+Users accuracy/precision
+
+Producer's accuracy (recall)
+
+F1 Score
+
+ROC Score
+
+Train test split
+
+CV
+
+WATCH OUT FOR SPATIAL AUTOCORRELATION IN REMOTELY SENSED DATA - need to keep training and testing data far apart
+
+![](images/image-1098293457.png)
+
+## Applications
+
+Change detection?
+
+OBIA: [Object based image analysis for remote sensing - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0924271609000884)
+
+NASA urban image classification:
+
+[Urban Image Classification: Per-Pixel Classifiers, Sub-Pixel Analysis, Object-Based Image Analysis, and Geospatial Methods - NASA Technical Reports Server (NTRS)](https://ntrs.nasa.gov/citations/20140012911)
+
+[Remote Sensing \| Special Issue : New Advances on Sub-pixel Processing: Unmixing and Mapping Methods (mdpi.com)](https://www.mdpi.com/journal/remotesensing/special_issues/Sub-pixel_Processing)
+
+[Remote Sensing \| Special Issue : Object Based Image Analysis for Remote Sensing (mdpi.com)](https://www.mdpi.com/journal/remotesensing/special_issues/OBIA_RS)
+
+## Reflections

@@ -9,29 +9,239 @@
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Introduction",
+    "title": "1  About Me",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nThis is my Quarto book!\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Hi! I’m Mike. I’m an urban planner by training, but my first degree was in English Literature. I have six years of experience working in the creative industry, during which time I did a range of things – copywriting, content strategy, a bit of photography and directing of short films.\nI transitioned to planning in 2019, completing a Master’s degree in City and Regional Planning at the University of Cape Town. Subsequent to that I worked for the Western Cape Provincial government. The highlight of my time there was working on an Inclusionary Housing Policy Framework for the province.\nHere’s a video that I worked on with one of my colleagues from the creative industry to describe the Inclusionary Housing Policy Framework:\n\nI’ve always enjoyed data and working with numbers, which is what drew me to my current pursuit: an MSc Urban Spatial Science at University College London’s Centre for Advanced Spatial Analysis. This site is a learning diary for one of my modules, Remotely Sensing cities and Environments. I hope that you enjoy it!"
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Overview",
+    "objectID": "Week 1.html",
+    "href": "Week 1.html",
+    "title": "2  Week 1",
     "section": "",
-    "text": "Learning Diary for CASA0023.\n\n1 + 1\n\n[1] 2"
+    "text": "3 Summary\nIn my view, the most exciting applications for remote sensing data are in situations where traditional forms of data collection – such as a national census – are unreliable or out of date. This is true of South Africa, where obtaining up-to-date demographic or economic information is very difficult. This has led to one private sector company effectively cornering the market on spatially disaggregated demographic data. I’ll discuss that a bit more in week 4, when I get into policy.\nThere are many applications of Remote Sensing, and they tend to overlap quite a bit, but since the practical covered imagery from Sentinel 2 and Landsat 8/9, I’ll cover some interesting applications of these two sources of imagery here:\nMy first impression was how long a lot of this takes. Working with the raster data in SNAP and then processing it in R is conv\nI’ve got experience in photography from my previous career, so it was also interesting to interact with large raster files in a completely different way, and to play around with histograms from the electromagnetic spectrum (my previous exposure to histograms and raster imagery was in trying to get rid of ‘clipping’ in areas of a photograph that are over-or-under exposed – which means that parts of an image are entirely black or white. The higher the dynamic range of the camera’s sensor, the more room you have to play. Working with the images in SNAP and then displaying them in QGIS reminded me of that – and it’s quite cool to see how an image can be ‘built’ from three greyscale RGB bands into a full colour composite.\nI’m also quite used to using satellite imagery as a basemap for spatial analysis in my previous job as an urban planner. There, the purpose was usually to provide context for the viewer looking at the map (or for myself when working). That was often quite high resolution RGB imagery, and I took it for granted that I was able to zoom into a particular location and see what was happening at a very fine scale. It’s quite interesting to change tack here to working with spectral imagery, which has a lower resolution but a lot more information because of the different bands."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "3  about",
+    "objectID": "Week 1.html#what-is-remote-sensing",
+    "href": "Week 1.html#what-is-remote-sensing",
+    "title": "2  Week 1",
+    "section": "3.1 What is remote sensing?",
+    "text": "3.1 What is remote sensing?\nRemote sensing is a subset of Geographic Information Science (GIS), and broadly refers to the science (and art) of using remote instruments – sensors mounted on satellites or planes – to record information remotely. One formal definition defines remote sensing as\n\nthe art, science, and technology of obtaining reliable information about physical objects and the environment, through the process of recording, measuring and interpreting imagery and digital representations of energy patterns derived from non-contact sensor systems (Colwell, 1997).\n\nThis week, I will cover some sources of remote sensing data, as well as some applications of its use."
+  },
+  {
+    "objectID": "Week 1.html#active-and-passive-sensors",
+    "href": "Week 1.html#active-and-passive-sensors",
+    "title": "2  Week 1",
+    "section": "3.2 Active and passive sensors",
+    "text": "3.2 Active and passive sensors\nThere are two key types of remote sensors: Passive and active. Passive sensors read light from the sun reflected off the earth’s surface. The images they read can be interfered with by, for example, clouds or atmospheric haze. Active sensors, on the other hand, send a signal down to the earth that bounces back to the satellite’s sensor. These sensors can, as a result, operate at night and see through clouds. The figure below illustrates the difference.\n\n\n\nPassive sensors rely on reflectance from the sun, whereas active sensors send their own signals and are able to see through clouds and gather data at night (Barba-Sevilla and Menezes 2023).\n\n\nElectromagnetic signatures\nAs discussed above, passive sensors read radiation reflected from the earth’s surface. Different types of radiation have different wavelengths, and operate in different parts of the electromagnetic spectrum. And different materials reflect different values on different parts of the electromagnetic spectrum. So different sensors can read different wavelengths, which provide different types of information (and operate under different constraints).\nThe figure below shows the electromagnetic spectrum, and different instruments that operate at different points on the spectrum. The earth’s atmosphere blocks most wavelengths on the spectrum, with the exceptions of radio waves, visible light (the ‘optical window’ below), and some parts of the infrared spectrum. Most passive sensors read wavelengths within the optical window, and active sensors operate using radio waves.\n\n\n\nOnly certain types of radiation reach the earth’s surface from space (Geospatial UK 2021)."
+  },
+  {
+    "objectID": "Week 1.html#paragraph-on-different-types-of-electromagnetic-signatures-ndvi-etc",
+    "href": "Week 1.html#paragraph-on-different-types-of-electromagnetic-signatures-ndvi-etc",
+    "title": "2  Week 1",
+    "section": "3.3 Paragraph on different types of electromagnetic signatures, NDVI, etc",
+    "text": "3.3 Paragraph on different types of electromagnetic signatures, NDVI, etc\n\nSource, load and articulate the differences between Landsat and Sentinel data\n\nLandsat: xxx\nSentinel: xxx\n\nUndertake basic raster image statistics and processing\nEvaluate the (dis)advantages of each type of software you have used\nPull out and statistically compare spectral signatures"
+  },
+  {
+    "objectID": "Week 1.html#section",
+    "href": "Week 1.html#section",
+    "title": "2  Week 1",
+    "section": "3.4 ",
+    "text": "3.4 \nRemote sensing resolutions\nRemote sensing data has four resolutions, namely:\n\n3.4.1 \nSpectral\n\n\n3.4.2 Spatial\n\n\n3.4.3 Temporal\n\n\n3.4.4 Radiometric"
+  },
+  {
+    "objectID": "Week 1.html#sensors",
+    "href": "Week 1.html#sensors",
+    "title": "2  Week 1",
+    "section": "4.1 Sensors",
+    "text": "4.1 Sensors\nLandsat, SENTINEL"
+  },
+  {
+    "objectID": "Week 1.html#areas-extracted",
+    "href": "Week 1.html#areas-extracted",
+    "title": "2  Week 1",
+    "section": "4.2 Areas extracted",
+    "text": "4.2 Areas extracted"
+  },
+  {
+    "objectID": "week 2.html",
+    "href": "week 2.html",
+    "title": "3  week 2",
     "section": "",
-    "text": "About me"
+    "text": "Insert link to presentation"
+  },
+  {
+    "objectID": "week 3.html",
+    "href": "week 3.html",
+    "title": "4  Week 3",
+    "section": "",
+    "text": "5 Week 3: Enhancements"
+  },
+  {
+    "objectID": "week 3.html#summary",
+    "href": "week 3.html#summary",
+    "title": "4  Week 3",
+    "section": "5.1 Summary",
+    "text": "5.1 Summary\nThere are many different types of correction and enhancement possible for remote sensing. Corrections typically are typically applied to remove flaws created by the sensor, atmosphere, or terrain. However, for the purpose of this week, I am going to focus on a couple of enhancements of remote sensing imagery – namely Ratio, Texture, and Principal Component Analysis (PCA).\n\n5.1.1 Ratio: Normalised Difference Vegetation Index (NDVI)\nRatio enhancements use the different spectral signatures of different materials in spectral bands to exaggerate specific features. NDVI uses red and near-infrared spectral bands to draw out healthy vegetation, because healthy vegetation reflects highly in the near infrared wavelength and is absorbed in the red red one. Areas with a high NDVI index represent healthy vegetation.\nThe image below shows the NDVI for Cape Town in XXX. It’s a bit hard to read because of the ocean:\n\n\n\nNormalised Difference Vegetation Index for Cape Town\n\n\nWe can get around this by utilising only NDVI values over 0.15. Here the healthy vegetation in the farmland to the North of the city is emphasised. Interestingly, areas that are mountainous or national parks do not register on the NDVI. This may be because of XX, or YY:\n\n\n\nNDVI for Cape Town (only showing values above 1.5)\n\n\n\n\n5.1.2 Texture\nTexture is pretty cool. Essentially, it’s a measure of each pixel’s similarity (or difference) to the pixels around it. For example, the image below shows homogeneity for Cape Town. It’s calculated using a grey-level co-occurrence matrix (GLCM). This involves creating a matrix for all pixels and their neighbours in an image, and calculating how homogeneous (similar) each pixel is to its neighbours. In the image below, areas with high homogeneity (the ocean, stretches of agricultural land in the north) are white, while areas with significant contrast (such as the coastline) are dark, due to the high contrast between the ocean and beaches.\n\n\n\nTexture (homogeneity) for Cape Town\n\n\n\n\n5.1.3 PCA\n\n\n\nPCA for Cape Town"
+  },
+  {
+    "objectID": "week 3.html#applications",
+    "href": "week 3.html#applications",
+    "title": "4  Week 3",
+    "section": "5.2 Applications",
+    "text": "5.2 Applications\nOf the three techniques I have described above, NDVI probably has the most obvious practical application. It’s easy to see how a vegetation index can be useful for monitoring and predicting crop yields, fire hazards, and XXX. The examples I’ve given for texture analysis and PCA are less clear in their immediate use, but that doesn’t mean they aren’t extremely powerful. Texture can, for example, be used for change detection (LINK) or to classify different land uses. This video, particularly from 17:38 to XXX, discusses some applications of texture in remote sensing data:\n\n17:38 PCA can be used for a variety of remote sensing applications, such as feature extraction, change detection, and classification.\nOther applications include estimating the roughness of soil, as this study does:\nSpatial estimation of surface soil texture using remote sensing data (tandfonline.com)\nAnd using texture for feature classification when spectral data may be unreliable:\nMicrosoft Word - paperISPRS_04.doc (PULL THE TABLE OUT MAYBE?)"
+  },
+  {
+    "objectID": "week 3.html#reflections",
+    "href": "week 3.html#reflections",
+    "title": "4  Week 3",
+    "section": "5.3 Reflections",
+    "text": "5.3 Reflections\nFirst encountered PCA last term in the Foundations of Spatial Data Science module. It was quite intimidating then and I really didn’t know how to make sense of it. Now it makes a bit more conceptual sense, and it’s exciting to see all of the different ways that it can be applied. Similarly, I had never encountered texture analysis before, but it’s really interesting to see how"
+  },
+  {
+    "objectID": "week 4.html",
+    "href": "week 4.html",
+    "title": "5  Week 4",
+    "section": "",
+    "text": "6 Policy: The City of Cape Town Municipal Spatial Development Framework"
+  },
+  {
+    "objectID": "week 4.html#summary",
+    "href": "week 4.html#summary",
+    "title": "5  Week 4",
+    "section": "6.1 Summary",
+    "text": "6.1 Summary\nThe City of Cape Town Municipal Spatial Development Framework (MSDF) is a policy document that guides spatial planning and land use decisions for the City of Cape Town. It’s a requirement of the Spatial Planning and Land Use Management Act (SPLUMA) cite that all municipalities have an MSDF. SPLUMA is pretty interesting legislation. It was introduced in 2013 to rationalise South Africa’s fragmented planning legislation. One of the most exciting (in theory) things about it is the development principles it introduces. According to law in South Africa, all planning decisions taken by government must take into account the principles of:\n\nSpatial Justice;\nSpatial Sustainability;\nEfficiency;\nSpatial Resilience; and\nGood Administration\n\nPretty cool, right? Except it’s very difficult to define all of these things, and so it’s very common for developers to argue that a car-centred gated development located in the middle of nowhere will contribute to spatial justice and sustainability.\nThat’s why it’s extremely important in South Africa to have clear planning policy that’s informed by evidence (including remote sensing data). I think the city does a pretty decent job in this regard – their policy is generally sound, and informed by strong analysis. Where things can break down is at the interface between policy and individual land use decisions, which get made with little reference to policy or spatial planning principles – often to the discontent of residents (LINKS).\nThe Cape Town MSDF is summed up in this image, which has been nicknamed the ‘blue turtle’ by planners in South Africa – the blue areas (which resemble a turtle) are the areas of the city where development is encouraged:\n\n\n\nThe City of Cape Town MSDF\n\n\nThis video talks about the MSDF’s approach to housing, which is where I believe remote sensing data has significant application for the city:"
+  },
+  {
+    "objectID": "week 4.html#applications",
+    "href": "week 4.html#applications",
+    "title": "5  Week 4",
+    "section": "6.2 Applications",
+    "text": "6.2 Applications\nKey issues: informality, growth, unmet demant\nSolutions: LIDAR dude,"
+  },
+  {
+    "objectID": "week 4.html#reflections",
+    "href": "week 4.html#reflections",
+    "title": "5  Week 4",
+    "section": "6.3 Reflections",
+    "text": "6.3 Reflections\nI mentioned earlier that the MSDF is a requirement of national legislation. In South Africa, municipalities are required by law to have something called an Integrated Development Plan (IDP), which sets out the budgeting priorities for the municipality. The IDP is renewed every five years. An MSDF – which is a separate document – is part of the IDP, and gives spatial expression to the policies described there. It’s meant as a long-term plan, and operates according to a 10-or-20-year vision. This is where things get a bit weird, because the MSDF is subservient to the IDP, but the IDP operates on a shorter timeline than the MSDF.\nI used to work in provincial government, and we’d offer support to the 33 municipalities in the Western Cape. In March/April every year there was always a big headache trying to make sure that all municipalities re-approved their IDPs and MSDFs, in order to ensure that they were legislatively compliant and protected from litigation in the event of disputes over land-use decisions (Western Cape municipalities are home to some particularly litigious residents).\nAnyway, this is a long-winded way of saying that a big part of the job of a spatial planner is ensuring that the policies and interventions they propose are compliant with legislation or other policy, and that this can mean that much of the work of policymakers is actually spent on this rather than the content.\nCCT MSDF\nKey issue: land invasions\nRS interventions: predict areas susceptible? Refer to OB idea (informal mining)?"
+  },
+  {
+    "objectID": "week 5.html",
+    "href": "week 5.html",
+    "title": "6  week 5",
+    "section": "",
+    "text": "7 Week 5: Google Earth Engine"
+  },
+  {
+    "objectID": "week 5.html#summary",
+    "href": "week 5.html#summary",
+    "title": "6  week 5",
+    "section": "7.1 Summary",
+    "text": "7.1 Summary\nThis week we dived into Google Earth Engine, which has dramatically accelerated the field of remote sensing. I have to say that it was a relief to start using Earth Engine – I found the process of having to manually download and process images in SNAP or QGIS cumbersome and time-consuming. That’s the main advantage of Earth Engine: the fact that it dramatically reduces processing time and eases computational resources.\nThis week we covered “reducing” – essentially, aggregation functions to provide a particular value (such as the median) for each pixel, as well as linear regression and spatial joins. We also ran PCA, which was eye-opening after week three when I ran PCA in R. Then I started the process and went out for a run to let it finish. This time, it just ran easily in a few seconds:\nInsert video here\nAnd here’s the NDVI for Cape Town using landsat imagery from XX to XX:\n\nAnd the GLCM texture measure from the same imagery:\n\nAnd finally the first principal component from PCA:\n\n\n7.1.1 Setup\nXXX\n\n\n7.1.2"
+  },
+  {
+    "objectID": "week 5.html#applications",
+    "href": "week 5.html#applications",
+    "title": "6  week 5",
+    "section": "7.2 Applications",
+    "text": "7.2 Applications\nThe applications for Google Earth Engine are really limitless! Earth Engine really changed things by making remote sensing analysis faster and more accessible (you don’t have to download huge amounts of data and then spend ages processing giant raster files). So the applications are not necessarily different to what was possible before, but it has really opened up the scale and creativity of analysis.\n\n\n\nGEE applications\n\n\nhttps://ieeexplore.ieee.org/document/9184118\n\nPCA - very quick"
+  },
+  {
+    "objectID": "week 5.html#reflections",
+    "href": "week 5.html#reflections",
+    "title": "6  week 5",
+    "section": "7.3 Reflections",
+    "text": "7.3 Reflections\nAnalysis ready data?\nEasy to use - removes barriers to entry\nJavascript?\nRisks: Google takes away (ie GSV?)\nLimitations: lack of phase data, aggregates of some information (ie night lights)"
+  },
+  {
+    "objectID": "week 6.html",
+    "href": "week 6.html",
+    "title": "7  week 6",
+    "section": "",
+    "text": "8 Week 6: Classification 1"
+  },
+  {
+    "objectID": "week 6.html#summary",
+    "href": "week 6.html#summary",
+    "title": "7  week 6",
+    "section": "8.1 Summary",
+    "text": "8.1 Summary\nThis week we got into machine learning with Google Earth Engine.\nWe covered a range of supervised machine learning tools – from simple linear regression (which is a very basic form of supervised learning) to Classification and Regression Trees (CART) and Random Forests. Earth Engine lets you run all of these methods in just a few lines of code, and they provide a very good way to predict or classify what is happening in an area using remotely sensed data.\n\n8.1.1 CART\nCART works by subsetting the data in a series of forks. Each fork is split into a predictor variable and each node has a prediction at the end, as shown below:\n\n\n\nhttps://www.geeksforgeeks.org/cart-classification-and-regression-tree-in-machine-learning/\n\n\nCART can be used on both categorical (classification), as well as continuous (regression) outcome variables. The algorithm splits the data in order to minimise the variance (the mean square error for continuous data and the gini impurity for categorical data) in each split.\nIn the case of categorical variables, the value for each subset is the majority class of the response variable falling into that category; in the case of continuous data, the output is the mean of the records in the subset.\nRF\nFrom LR to CART, RF, etc\nHow classified data is used\nHow to classify remotely sensed data"
+  },
+  {
+    "objectID": "week 6.html#applications",
+    "href": "week 6.html#applications",
+    "title": "7  week 6",
+    "section": "8.2 Applications",
+    "text": "8.2 Applications\nNightlights paper india?\nLCLU, what else?\nIllegal logging\nUrban expansion?\nForest fires - canonical example"
+  },
+  {
+    "objectID": "week 6.html#reflections",
+    "href": "week 6.html#reflections",
+    "title": "7  week 6",
+    "section": "8.3 Reflections",
+    "text": "8.3 Reflections\nVery powerful - but lack of explainability a limitation, especially in a policy context\nCovered these techniques elsewhere, but in a mostly theoretical context. Very interesting to see how they can actually be applied to remotely sensed data. Spatial resolution of most freely available imagery is a concern for most urban applications - difficult to differentiate between land uses within an area for example, as most buildings will be significantly smaller than the resolution of the pixels."
+  },
+  {
+    "objectID": "week 7.html",
+    "href": "week 7.html",
+    "title": "8  week 7",
+    "section": "",
+    "text": "9 Week 7: Classification - The Big Questions"
+  },
+  {
+    "objectID": "week 7.html#summary",
+    "href": "week 7.html#summary",
+    "title": "8  week 7",
+    "section": "9.1 Summary",
+    "text": "9.1 Summary\nThis week we continued with more classification algorithms in GEE. We focused on object-based image analysis and sub-pixel analysis, which I will describe below.\n\n9.1.1 Object-based Image Analysis\nThis uses a clustering algorithm – one of the most common is Simple Linear Iterative Clustering (SLIC) – to identify areas that are similar to each other and create shapes of similar (homogeneous) or different (heterogeneous) ‘superpixels’.\n\n\n9.1.2 Sub-pixel Analysis\nThis determines the proportion of each landcover type per pixel. Essentially, it works by comparing the reflectance values in each pixel to the ‘ideal’ values of a spectrally pure endmember for that landcover class – these values are arrived at through LABORATORY MEASUREMENTS OR??\n\n\n9.1.3 Accuracy\nThere are a number of ways to measure the accuracy of a model in remote sensing and machine learning. Which measure (or combination of measures) you choose depends on the application.\nBinary confusion matrix\nUsers accuracy/precision\nProducer’s accuracy (recall)\nF1 Score\nROC Score\nTrain test split\nCV\nWATCH OUT FOR SPATIAL AUTOCORRELATION IN REMOTELY SENSED DATA - need to keep training and testing data far apart"
+  },
+  {
+    "objectID": "week 7.html#applications",
+    "href": "week 7.html#applications",
+    "title": "8  week 7",
+    "section": "9.2 Applications",
+    "text": "9.2 Applications\nChange detection?\nOBIA: Object based image analysis for remote sensing - ScienceDirect\nNASA urban image classification:\nUrban Image Classification: Per-Pixel Classifiers, Sub-Pixel Analysis, Object-Based Image Analysis, and Geospatial Methods - NASA Technical Reports Server (NTRS)\nRemote Sensing | Special Issue : New Advances on Sub-pixel Processing: Unmixing and Mapping Methods (mdpi.com)\nRemote Sensing | Special Issue : Object Based Image Analysis for Remote Sensing (mdpi.com)"
+  },
+  {
+    "objectID": "week 7.html#reflections",
+    "href": "week 7.html#reflections",
+    "title": "8  week 7",
+    "section": "9.3 Reflections",
+    "text": "9.3 Reflections"
+  },
+  {
+    "objectID": "week 8.html",
+    "href": "week 8.html",
+    "title": "9  week 8",
+    "section": "",
+    "text": "10 Temperature"
+  },
+  {
+    "objectID": "week 8.html#summary",
+    "href": "week 8.html#summary",
+    "title": "9  week 8",
+    "section": "10.1 Summary",
+    "text": "10.1 Summary\nRemote sensing/temperatur\nMODIS?"
+  },
+  {
+    "objectID": "week 8.html#applications",
+    "href": "week 8.html#applications",
+    "title": "9  week 8",
+    "section": "10.2 Applications",
+    "text": "10.2 Applications\nUrban heat island\nhttps://www.csir.co.za/planning-cities-better-manage-rising-temperatures#:~:text=Researchers%20have%20found%20that%20South,surfaces%2C%20used%20in%20urban%20spaces.\nNUA/SDG\nhttps://www.health.gov.za/wp-content/uploads/2022/06/National-Heat-Health-Action-Guidelines.pdf\nSuperblocks\nDoes surface coating work?"
+  },
+  {
+    "objectID": "week 8.html#reflections",
+    "href": "week 8.html#reflections",
+    "title": "9  week 8",
+    "section": "10.3 Reflections",
+    "text": "10.3 Reflections\nI find this complicated - as with so many urban issues, hard to drive systemic change when cities are created by so many small decisions. “Cities are built one land use decision at a time”. Milner court paint colour issue?"
   },
   {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Barba-Sevilla, Magali, and Elizabeth Ashley Menezes. 2023. “GUIDE:\nFUNDAMENTALS OF SYNTHETIC APERTURE RADAR (SAR).” https://storymaps.arcgis.com/stories/20d8cd2ce11a4d5d81a8a65711d5ec29.\n\n\nGeospatial UK. 2021. “What Is Remote Sensing?” https://www.geospatialuk.org/post/what-is-remote-sensing."
   }
 ]

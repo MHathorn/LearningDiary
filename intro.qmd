@@ -1,11 +1,15 @@
-# Introduction
+---
+title: "About Me"
+---
 
-This is a book created from markdown and executable code.
+![](images/000019.jpg){width="1200"}
 
-This is my Quarto book!
+Hi! I'm Mike. I'm an urban planner by training, but my first degree was in English Literature. I have six years of experience working in the creative industry, during which time I did a range of things -- copywriting, content strategy, a bit of photography and directing of short films.
 
-See @knuth84 for additional discussion of literate programming.
+I transitioned to planning in 2019, completing a Master's degree in City and Regional Planning at the University of Cape Town. Subsequent to that I worked for the Western Cape Provincial government. The highlight of my time there was working on an [Inclusionary Housing Policy Framework](https://www.westerncape.gov.za/eadp/news/western-cape-government-first-adopt-inclusionary-housing-policy) for the province. 
 
-```{r}
-1 + 1
-```
+Here's a video that I worked on with one of my [colleagues](https://dribbble.com/bashwax) from the creative industry to describe the Inclusionary Housing Policy Framework:
+
+{{< video https://youtu.be/_KF0V7J7zFY >}}
+
+I've always enjoyed data and working with numbers, which is what drew me to my current pursuit: an MSc Urban Spatial Science at University College London's [Centre for Advanced Spatial Analysis](https://www.ucl.ac.uk/bartlett/casa/bartlett-centre-advanced-spatial-analysis). This site is a learning diary for one of my modules, Remotely Sensing cities and Environments. I hope that you enjoy it!

@@ -1,0 +1,32 @@
+---
+title: "week 8"
+bibliography: references.bib
+---
+
+# Temperature
+
+## Summary
+
+Remote sensing/temperatur
+
+MODIS?
+
+![](images/Screenshot%202023-03-12%20113210.jpg)
+
+## Applications
+
+Urban heat island
+
+https://www.csir.co.za/planning-cities-better-manage-rising-temperatures#:\~:text=Researchers%20have%20found%20that%20South,surfaces%2C%20used%20in%20urban%20spaces.
+
+NUA/SDG
+
+https://www.health.gov.za/wp-content/uploads/2022/06/National-Heat-Health-Action-Guidelines.pdf
+
+Superblocks
+
+Does surface coating work?
+
+## Reflections
+
+I find this complicated - as with so many urban issues, hard to drive systemic change when cities are created by so many small decisions. "Cities are built one land use decision at a time". Milner court paint colour issue?

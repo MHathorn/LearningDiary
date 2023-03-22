@@ -1,0 +1,52 @@
+---
+title: "Week 4"
+bibliography: references.bib
+---
+
+# Policy: The City of Cape Town Municipal Spatial Development Framework
+
+## Summary
+
+The City of Cape Town Municipal Spatial Development Framework (MSDF) is a policy document that guides spatial planning and land use decisions for the City of Cape Town. It's a requirement of the Spatial Planning and Land Use Management Act (SPLUMA) **cite** that all municipalities have an MSDF. SPLUMA is pretty interesting legislation. It was introduced in 2013 to **rationalise** South Africa's fragmented planning legislation. One of the most exciting (in theory) things about it is the development principles it introduces. According to law in South Africa, all planning decisions taken by government must take into account the principles of:
+
+-   Spatial Justice;
+
+-   Spatial Sustainability;
+
+-   Efficiency;
+
+-   Spatial Resilience; and
+
+-   Good Administration
+
+Pretty cool, right? Except it's very difficult to define all of these things, and so it's very common for developers to argue that a car-centred gated development located in the middle of nowhere will contribute to spatial justice and sustainability.
+
+That's why it's extremely important in South Africa to have clear planning policy that's informed by evidence (including remote sensing data). I think the city does a pretty decent job in this regard -- their policy is generally sound, and informed by strong analysis. Where things can break down is at the interface between policy and individual land use decisions, which get made with little reference to policy or spatial planning principles -- often to the discontent of residents (**LINKS**).
+
+The Cape Town MSDF is summed up in this image, which has been nicknamed the 'blue turtle' by planners in South Africa -- the blue areas (which resemble a turtle) are the areas of the city where development is encouraged:
+
+![The City of Cape Town MSDF](images/Ch5_M5d_Consolidated_Spatial_Plan_Concept.jpg)
+
+This video talks about the MSDF's approach to housing, which is where I believe remote sensing data has significant application for the city:
+
+{{< video https://youtu.be/dvdFeOi1fUo >}}
+
+## Applications
+
+Key issues: informality, growth, unmet demant
+
+Solutions: LIDAR dude,
+
+## Reflections
+
+I mentioned earlier that the MSDF is a requirement of national legislation. In South Africa, municipalities are required by law to have something called an Integrated Development Plan (IDP), which sets out the budgeting priorities for the municipality. The IDP is renewed every five years. An MSDF -- which is a separate document -- is part of the IDP, and gives spatial expression to the policies described there. It's meant as a long-term plan, and operates according to a 10-or-20-year vision. This is where things get a bit weird, because the MSDF is subservient to the IDP, but the IDP operates on a shorter timeline than the MSDF.
+
+I used to work in provincial government, and we'd offer support to the **33 municipalities in the Western Cape.** In March/April every year there was always a big headache trying to make sure that all municipalities re-approved their IDPs and MSDFs, in order to ensure that they were legislatively compliant and protected from litigation in the event of disputes over land-use decisions (Western Cape municipalities are home to some particularly litigious residents).
+
+Anyway, this is a long-winded way of saying that a big part of the job of a spatial planner is ensuring that the policies and interventions they propose are compliant with legislation or other policy, and that this can mean that much of the work of policymakers is actually spent on this rather than the content.
+
+CCT MSDF
+
+Key issue: land invasions
+
+RS interventions: predict areas susceptible? Refer to OB idea (informal mining)?

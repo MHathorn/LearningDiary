@@ -1,20 +1,33 @@
 ---
 title: "Week 1"
+bibliography: references.bib
 ---
 
 # Summary
 
 ## What is remote sensing?
 
-This week, we covered an intro to remote sensing. Remote sensing is a subset of Geographic Information Science (GIS), and broadly refers to the science (and art) of using remote instruments -- sensors mounted on satellites or planes -- to record information remotely. One formal definition is
+Remote sensing is a subset of Geographic Information Science (GIS), and broadly refers to the science (and art) of using remote instruments -- sensors mounted on satellites or planes -- to record information remotely. One formal definition defines remote sensing as
 
-> Photogrammetry and remote sensing are the art, science, and technology of obtaining reliable information about physical objects and the environment, through the process of recording, measuring and interpreting imagery and digital representations of energy patterns derived from non-contact sensor systems **(Colwell, 1997)**.
+> the art, science, and technology of obtaining reliable information about physical objects and the environment, through the process of recording, measuring and interpreting imagery and digital representations of energy patterns derived from non-contact sensor systems **(Colwell, 1997)**.
+
+This week, I will cover some sources of remote sensing data, as well as some applications of its use.
 
 ## **Active and passive sensors**
 
-XXX
+There are two key types of remote sensors: Passive and active. Passive sensors read light from the sun reflected off the earth's surface. The images they read can be interfered with by, for example, clouds or atmospheric haze. Active sensors, on the other hand, send a signal down to the earth that bounces back to the satellite's sensor. These sensors can, as a result, operate at night and see through clouds. The figure below illustrates the difference.
 
-**Passive sensors**
+![Passive sensors rely on reflectance from the sun, whereas active sensors send their own signals and are able to see through clouds and gather data at night [@barba-sevilla2023].](images/active-passive.jpg)
+
+**Electromagnetic signatures**
+
+As discussed above, passive sensors read radiation reflected from the earth's surface. Different types of radiation have different wavelengths, and operate in different parts of the electromagnetic spectrum. And different materials reflect different values on different parts of the electromagnetic spectrum. So different sensors can read different wavelengths, which provide different types of information (and operate under different constraints).
+
+The figure below shows the electromagnetic spectrum, and different instruments that operate at different points on the spectrum. The earth's atmosphere blocks most wavelengths on the spectrum, with the exceptions of radio waves, visible light (the 'optical window' below), and some parts of the infrared spectrum. Most passive sensors read wavelengths within the optical window, and active sensors operate using radio waves.
+
+![Only certain types of radiation reach the earth's surface from space [@geospatialuk2021].](images/electro2.jpg)
+
+## Paragraph on different types of electromagnetic signatures, NDVI, etc
 
 -   Source, load and articulate the differences between Landsat and Sentinel data
 
@@ -29,11 +42,13 @@ XXX
 -   Pull out and statistically compare spectral signatures
 
 ## 
+
 Remote sensing resolutions
 
 Remote sensing data has four resolutions, namely:
 
 ### 
+
 Spectral
 
 ### Spatial
@@ -42,9 +57,27 @@ Spectral
 
 ### Radiometric
 
+![](images/Screenshot%202023-03-21%20165750.jpg)
+
 # Applications
 
-The most exciting applications for remote sensing data are in situations where traditional forms of data collection -- such as a national census -- are unreliable or out of date. This is true of South Africa, where obtaining up-to-date demographic or economic information is very difficult. This has led to one private sector company effectively cornering the market on spatial
+In my view, the most exciting applications for remote sensing data are in situations where traditional forms of data collection -- such as a national census -- are unreliable or out of date. This is true of South Africa, where obtaining up-to-date demographic or economic information is very difficult. This has led to one private sector company effectively cornering the market on spatially disaggregated demographic data. **I'll discuss that a bit more in week 4, when I get into policy.**
+
+There are many applications of Remote Sensing, and they tend to overlap quite a bit, but since the practical covered imagery from Sentinel 2 and Landsat **8/9**, I'll cover some interesting applications of these two sources of imagery here:
+
+### Sentinel 2
+
+The main advantage of Sentinel 2 is its higher resolution (spatial, temporal, and spectral). However there are some areas where Landsat imagery may be more desirable. This study by Chen and Zhu actually compared the two:
+
+[Comparing Landsat-8 and Sentinel-2 top of atmosphere and surface reflectance in high latitude regions: case study in Alaska: Geocarto International: Vol 37, No 20 (tandfonline.com)](https://www.tandfonline.com/doi/abs/10.1080/10106049.2021.1924295?journalCode=tgei20)
+
+It found XX and YY.
+
+### Landsat
+
+This paper covers using landsat imagery to improve irrigation efficiencies in Morocco:
+
+[Morocco Irrigation Efficiencies Improvements: Riverside Technology, Inc. \| U.S. Geological Survey (usgs.gov)](https://www.usgs.gov/centers/fort-collins-science-center/science/morocco-irrigation-efficiencies-improvements-riverside)
 
 ## Sensors
 
@@ -56,4 +89,6 @@ Landsat, SENTINEL
 
 My first impression was how *long* a lot of this takes. Working with the raster data in SNAP and then processing it in R is conv
 
-I've got experience in photography from my previous career, so it was also interesting to interact with large raster files in a completely different way, and to play around with histograms from the electromagnetic spectrum.
+I've got experience in photography from my previous career, so it was also interesting to interact with large raster files in a completely different way, and to play around with histograms from the electromagnetic spectrum (my previous exposure to histograms and raster imagery was in trying to get rid of 'clipping' in areas of a photograph that are over-or-under exposed -- which means that parts of an image are entirely black or white. The higher the dynamic range of the camera's sensor, the more room you have to play. Working with the images in SNAP and then displaying them in QGIS reminded me of that -- and it's quite cool to see how an image can be 'built' from three greyscale RGB bands into a full colour composite.
+
+I'm also quite used to using satellite imagery as a basemap for spatial analysis in my previous job as an urban planner. There, the purpose was usually to provide context for the viewer looking at the map (or for myself when working). That was often quite high resolution RGB imagery, and I took it for granted that I was able to zoom into a particular location and see what was happening at a very fine scale. It's quite interesting to change tack here to working with spectral imagery, which has a lower resolution but a lot more information because of the different bands.
