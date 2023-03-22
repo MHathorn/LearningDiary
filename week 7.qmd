@@ -54,3 +54,7 @@ NASA urban image classification:
 [Remote Sensing \| Special Issue : Object Based Image Analysis for Remote Sensing (mdpi.com)](https://www.mdpi.com/journal/remotesensing/special_issues/OBIA_RS)
 
 ## Reflections
+
+Different applications of methods we have learnt elsewhere
+
+Accuracy measures - enjoy producers/users

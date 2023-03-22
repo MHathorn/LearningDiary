@@ -7,9 +7,29 @@ bibliography: references.bib
 
 ## Summary
 
-Remote sensing/temperatur
+This week we covered the role that remote sensing can play in helping cities adapt to and mitigate rising temperatures. The Urban Heat Island is a well-documented **SOURCE SOURCE** phenomenon. It refers to the tendency for built-up areas to have higher temperatures than their surrounds (**check this**). This is a pretty significant problem, given that **the majority of the world's population live in cities**.
 
-MODIS?
+A key part of the issue is that urban heat islands tend to produce positive feedback loops. This means that they are self-reinforcing, and the effect gets worse over time. Different aspects of the built environment interact with each other and magnify the heating effects of other factors. This image illustrates part of the urban heat island effect: Built up areas have lower rates of evapotranspiration, and tall buildings trap ambient heat. These two mechanisms combine for a larger heating effect:
+
+![Source: [Public Health Notes](https://www.publichealthnotes.com/urban-heat-island-effects-mitigation-measures/)](images/Featured-image.gif)
+
+From a policy perspective, remote sensing data provides a number of advantages in detecting, understanding, monitoring, and intervening to reduce this effect.
+
+There are a number of satellites that capture temperature data, including Landsat and the Moderate Resolution Imaging Spectroradiometer (MODIS). MODIS has a high temporal resolution, which allows for 1-2 images a day in most parts of the world.
+
+Here I've calculated mean temperature for the Western Cape using both Landsat and MODIS:
+
+**Landsat:**
+
+![Mean Landsat temperature for the Western Cape in 2022 (lighter colours represent higher temperatures).](images/LANDSAT%20TEMP.jpg)
+
+**MODIS:**
+
+![Mean MODIS temperature for the Western Cape in 2022 (lighter colours represent higher temperatures).](images/MODIS%20TEMP.jpg)
+
+You can see that MODIS captures a lot more of the variation in temperature than Landsat. Interestingly, the MODIS temperature data picks up changes in elevation pretty well: You can see the Cape Fold mountains very clearly in the image above.
+
+Another interesting dimension, given all of the discussion above about urban heat island effects, is that Cape Town doesn't really register as having a high temperature in either image. That isn't all that surprising, however: the bright area in the North is Namaqualand, which is a desert, and the one in the North East is the Karoo, an arid semi-desert region that has been in the grips of a prolonged multi-year drought.
 
 ![](images/Screenshot%202023-03-12%20113210.jpg)
 
@@ -29,4 +49,8 @@ Does surface coating work?
 
 ## Reflections
 
-I find this complicated - as with so many urban issues, hard to drive systemic change when cities are created by so many small decisions. "Cities are built one land use decision at a time". Milner court paint colour issue?
+I find this complicated - as with so many urban issues, it's difficult to drive systemic change when cities are created by so many small decisions. Cities are built one land use decision at a time, and that's especially the case with something like the urban heat island effect: the cumulative impact of many individual decisions has led to this scenario.
+
+I remember when, a few years ago, the block of flats that I lived in was due to be repainted. The residents wanted to go with a darker colour because it was fashionable. I tried to object on the basis of the heat impact of the darker colour (I also just didn't think it looked very nice, so my argument was biased), but there was very little interest in that argument from other residents. I think that's the case with a lot of this: it's difficult to understand, in the abstract, how a decision like choosing a paint colour for your building will contribute to global warming. However, when many people think that way, and these small decisions reinforce each other, it adds up to a positive feedback loop that is very difficult to arrest.
+
+I think that's a really big advantage to remote sensing data being applied in this way: It makes it possible to quantify existing trends, and model how different interventions will change things in the future.

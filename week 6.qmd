@@ -1,5 +1,5 @@
 ---
-title: "week 6"
+title: "Week 6"
 bibliography: references.bib
 ---
 
@@ -9,7 +9,9 @@ bibliography: references.bib
 
 This week we got into machine learning with Google Earth Engine.
 
-We covered a range of **supervised** machine learning tools -- from simple linear regression (which is a very basic form of supervised learning) to Classification and Regression Trees (CART) and Random Forests. Earth Engine lets you run all of these methods in just a few lines of code, and they provide a very good way to predict or classify what is happening in an area using remotely sensed data.
+We covered a range of **supervised** machine learning tools -- from simple linear regression (which is a very basic form of supervised learning) to Classification and Regression Trees (CART) and Random Forest methods. Earth Engine lets you run all of these methods in just a few lines of code, and they provide a very good way to predict or classify what is happening in an area using remotely sensed data.
+
+This feels like the area where Earth Engine really comes into its own: it's amazing to have such a range of analysis-ready imagery readily available, and to be able to run these algorithms so quickly. I'll discuss CART and Random Forest here, before getting into some of the ways it can be applied.
 
 ### CART
 
@@ -17,11 +19,15 @@ CART works by subsetting the data in a series of forks. Each fork is split into 
 
 ![https://www.geeksforgeeks.org/cart-classification-and-regression-tree-in-machine-learning/](images/CARTClassificationAndRegressionTree.jpg)
 
-CART can be used on both categorical (classification), as well as continuous (regression) outcome variables. The algorithm splits the data in order to minimise the variance (the mean square error for continuous data and the gini impurity for categorical data) in each split.
+CART can be used on both categorical (classification), as well as continuous (regression) outcome variables. The algorithm splits the data in order to have the lowest mean square error (for continuous data) or gini impurity (for categorical data) in each split. The way that I understand this intuitively is that the model will select the split at each point that **minimises** **the variance** in the resulting subset. In the case of categorical variables, the value for each subset is the majority class of the response variable falling into that category; in the case of continuous data, the output is the mean of the records in the subset. The algorithm will run through this process until it reaches a pre-defined stopping criteria.
 
-In the case of categorical variables, the value for each subset is the majority class of the response variable falling into that category; in the case of continuous data, the output is the mean of the records in the subset.
+So unlike linear regression, where you're trying to arrive at a single coefficient which estimates the slope of a relationship, CART outputs a series of mean values for different subsets of the data (in the case of a continuous outcome variable). This makes it useful for working with nonlinear datasets; the art of using CART is in deciding when and where to stop splitting the data. It's possible to keep going all the way down to individual records in the dataset, in which case the model will be perfectly predictive, but then it is unlikely to generalise well to unseen data as the model will be overfit on the dataset it has been trained on. Conversely, if there are too many records in each subset, the model is likely to be unreliable as a predictor as it will be underfit. This image shows how a decision tree algorithm might subset a two-dimensional dataset with a continuous outcome variable:
+
+![Decision tree subsetting (source: https://www.datacamp.com/tutorial/decision-trees-R)](images/Decision%20Tree.jpg)
 
 **RF**
+
+Where decision trees really come into their own is when they are used as part of an ensemble. While one tree might produce unreliable results, this can be overcome by creating many trees!
 
 From LR to CART, RF, etc
 
