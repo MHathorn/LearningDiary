@@ -49,6 +49,12 @@ WATCH OUT FOR SPATIAL AUTOCORRELATION IN REMOTELY SENSED DATA - need to keep tra
 
 ## Applications
 
+Advanced classification methods for land use and land cover have really moved to the next level recently. @brownDynamicWorldRealtime2022 created a model that updates global land use and land cover in near real-time. They use a deep learning to do it, and it's hosted on Earth Engine -- you can take a look [here](https://dynamicworld.app/explore).
+
+Elsewhere, sub-pixel analysis has been used for urban inundation mapping (essentially, maps of flooded areas in cities). @liSpatialAttractionModels2020 use deep learning in combination wiht Elman neural networks for sub-pixel analysis to improve the accuracy of flood mapping using Landsat imagery.
+
+Elsewhere, Object-Based Image Analysis has recently been used to map informal settlements by @matariraObjectBasedInformalSettlement2022. They used both optical imagery from Sentinel-2 and Planetscope, along with SAR data from Sentinel-1, to identify informal settlements in Durban, South Africa.
+
 Change detection?
 
 OBIA: [Object based image analysis for remote sensing - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0924271609000884)
@@ -62,6 +68,10 @@ NASA urban image classification:
 [Remote Sensing \| Special Issue : Object Based Image Analysis for Remote Sensing (mdpi.com)](https://www.mdpi.com/journal/remotesensing/special_issues/OBIA_RS)
 
 ## Reflections
+
+It's quite incredible to see how quickly the possibilities of remote sensing are expanding. Google Earth Engine has really opened up the possibilities, and it feels like there's been a real explosion in the discipline in recent years. I think this is both exciting and intimidating: these recent advances are so significant, and have such obvious utility, that it feels really exciting to be able to understand and undertake some of them. The paper that I described above that identifies informal settlements in Durban, for example, employs methods that I have learnt on this course and it doesn't feel like a huge stretch for me to be able to do something similar.
+
+At the same time, I feel like I'm just scratching the surface -- and the world of possibilities is really dizzying. I theoretically understand most of what @liSpatialAttractionModels2020 have done for inundation mapping, although it's a stretch, but the deep learning methods (and data infrastructure and pipelines) employed by @brownDynamicWorldRealtime2022 are just dizzying. I guess it's cool that I can really appreciate it now, at least, and I'm really pleased that I've started to gain some real applied insight into how to use remote sensing data -- because I really think it has incredibly powerful applications for cities.
 
 Different applications of methods we have learnt elsewhere
 

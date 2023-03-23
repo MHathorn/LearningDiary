@@ -31,15 +31,19 @@ Texture is pretty cool. Essentially, it's a measure of each pixel's similarity (
 
 ### PCA
 
+Principal Component Analysis (PCA) is a dimensionality reduction method -- it allows you to reduce a high dimensional dataset (like a multi-spectral raster file with many bands) into a lower number of dimensions. The first component (or dimension) is selected to explain as much of the variance as possible in each observation. That's what this image shows: the first principal component for the imagery used above:
+
 ![PCA for Cape Town](images/pca.png)
 
 ## Applications
 
-Of the three techniques I have described above, NDVI probably has the most obvious practical application. It's easy to see how a vegetation index can be useful for monitoring and predicting crop yields, fire hazards, and **XXX**. The examples I've given for texture analysis and PCA are less clear in their immediate use, but that doesn't mean they aren't extremely powerful. Texture can, for example, be used for change detection (LINK) or to classify different land uses. This video, particularly from 17:38 to **XXX**, discusses some applications of texture in remote sensing data:
+Of the three techniques I have described above, NDVI probably has the most obvious practical application. It's easy to see how a vegetation index can be useful for monitoring and predicting crop yields, fire hazards, and **XXX**. The examples I've given for texture analysis and PCA are less clear in their immediate use, but that doesn't mean they aren't extremely powerful. Texture can, for example, be used for change detection (LINK) or to classify different land uses. This video, particularly from 17:38 to 20:15, discusses some applications of texture in remote sensing data:
 
-{{< video https://youtu.be/GGejk18Fqhc >}}
+{{< video https://youtu.be/GGejk18Fqhc?t=1058 >}}
 
-17:38 PCA can be used for a variety of remote sensing applications, such as feature extraction, change detection, and classification.
+Basically, texture is used to retrieve the areas of an image that are most similar to a target area. It's very easy to see how that might be relevant to a remote sensing application in an urban environment -- it could be used to identify open space, informal areas, flood-prone areas, or a host of different things.
+
+PCA can be used for a variety of remote sensing applications, such as feature extraction, change detection, and classification.
 
 Other applications include estimating the roughness of soil, as this study does:
 
@@ -51,4 +55,6 @@ And using texture for feature classification when spectral data may be unreliabl
 
 ## Reflections
 
-First encountered PCA last term in the Foundations of Spatial Data Science module. It was quite intimidating then and I really didn't know how to make sense of it. Now it makes a bit more conceptual sense, and it's exciting to see all of the different ways that it can be applied. Similarly, I had never encountered texture analysis before, but it's really interesting to see how
+I've skirted around corrections here and focused on enhancement, probably because enhancement feels exciting and interesting (they let you draw out interesting features of the data) whereas corrections feel painstaking and time-consuming. I know they're important, but it's also really exciting to put PCA into use (even if my example above is pretty trivial and doesn't really offer much more than a grayscale map of Cape Town).
+
+I first encountered PCA last term in the Foundations of Spatial Data Science module. At the time I found it completely intimidating and had to really work in order to understand it. Now I think I get it conceptually (although performing the linear algebra is probably beyond me), and it's fun to be able to use it and understand how and why it's useful. Similarly, I had never encountered texture analysis before, but it's really interesting to learn about its uses in other disciplines (like medical imaging) and to start to get a sense of its value when applied to remote sensing imagery.
