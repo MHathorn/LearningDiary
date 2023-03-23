@@ -9,13 +9,21 @@ bibliography: references.bib
 
 This week we continued with more classification algorithms in GEE. We focused on object-based image analysis and sub-pixel analysis, which I will describe below.
 
-### Object-based Image Analysis
-
-This uses a clustering algorithm -- one of the most common is Simple Linear Iterative Clustering (SLIC) -- to identify areas that are similar to each other and create shapes of similar (homogeneous) or different (heterogeneous) 'superpixels'.
-
 ### Sub-pixel Analysis
 
-This determines the proportion of each landcover type per pixel. Essentially, it works by comparing the reflectance values in each pixel to the 'ideal' values of a spectrally pure endmember for that landcover class -- these values are arrived at through **LABORATORY MEASUREMENTS OR??**
+This determines the proportion of each landcover type per pixel. Essentially, it works by comparing the reflectance values in each pixel to the 'ideal' values of a spectrally pure endmember for that landcover class. The algorithm then infers what is likely to be the dominant landcover class in that pixel, based on probability. Usually, spectrally pure endmembers will be determined through laboratory measurements or controlled experiments. Below is an example of running sub-pixel analysis on Cape Town using polygons that I drew on a Landsat colour composite to classify landcover. From visual inspection, the algorithm performed reasonably well, although large stretches of the nature reserve in Cape Point (the peninsula in the South) have been classified as urban.
+
+![Sub pixel analysis. Green: Natural vegetation; Pink: Urban; Grey: Dry grass](images/sub-pixel_reclassified.jpg)
+
+### Object-based Image Analysis
+
+Object-based image analysis is almost the inverse of sub-pixel analysis: Instead of trying to determine what the landcover class within each pixel might be, it groups pixels together. It does this by identifying areas that are similar to each other and creating shapes of similar (homogeneous) or different (heterogeneous) 'superpixels'. Here is the output of an object-based image analysis that used Simple Non-Iterative Clustering (SNIC) to create a grid of super pixels (groups of pixels). It then assigned landcover classes using CART:
+
+![Super pixel analysis. Green: Natural vegetation; Pink: Urban; Grey: Dry grass](images/super-pixel_classified.jpg)
+
+From visual inspection, this actually performed better in identifying that Cape Point is not urban, but it has probably under-estimated the amount of natural vegetation and urban area in the metro as a whole.
+
+In order to formally assess the accuracy I would need to split the data into a training and testing set last and evaluate its performance. I haven't done that, but I outline some of the means for evaluating performance below.
 
 ### Accuracy
 

@@ -25,17 +25,31 @@ So unlike linear regression, where you're trying to arrive at a single coefficie
 
 ![Decision tree subsetting (source: https://www.datacamp.com/tutorial/decision-trees-R)](images/Decision%20Tree.jpg)
 
-**RF**
+Here's an example of a CART classifier on land use in Cape Town, using Sentinel 2 data (I've zoomed in so that a bit more of the detail is visible):
 
-Where decision trees really come into their own is when they are used as part of an ensemble. While one tree might produce unreliable results, this can be overcome by creating many trees!
+![CART classification in Cape Town on Sentinel 2 Imagery](images/Screenshot%202023-03-23%20162816.jpg)
 
-From LR to CART, RF, etc
+### **Random Forest**
 
-How classified data is used
+Where decision trees really come into their own is when many trees are used together as part of an ensemble. This is called a random forest. A random forest works by creating a whole lot of subsets of the training data, and creating a decision tree for each subset. The results for each subset are weighed together to arrive at a final prediction. While one tree might produce unreliable results, this can be overcome by creating many trees!
 
-How to classify remotely sensed data
+Here are the results of a Random Forest Classifier on the same imagery:
+
+![A random forest classifier for Cape Town imagery (Green: Mountain, pink: urban, purple: water, grey: industrial)](images/RF_classifier.jpg)
+
+There isn't a huge difference between either image -- there's definitely more noise in the CART output, and you can see more of the structure of the city coming through from the Random Forest model. These aren't perfect land use classifications by any means, but it's a pretty impressive result considering that the input classifiers were just some polygons I selected on the true colour composite. It's easy to see how this could quickly be turned into a useful land use/land cover output with better input classifications.
+
+#### **Accuracy**
+
+There are a couple of ways to measure the accuracy of this model. The one I have generated returns an Out of Bag Error Estimate of **14.5%**. This is fairly close to the model's validation accuracy (its performance on unseen data), which was **0.87%**. The training accuracy was much higher, at **99.6%**. I'll talk more about accuracy measures next week.
 
 ## Applications
+
+There are many ways that these models can and have been applied. There are applications around land cover and land use that I've described above.
+
+@mannUsingVIIRSDay2016 used a Random Forest model to predict instances of power outages in India from nighttime Visible Infrared Imaging Radiometer Suite (VIIRS) imagery, which shows lights on earth at night. They did this by training the model on known instances of power outages using voltage monitoring data from an NGO. A map of their output is shown below. I think this kind of approach would be extremely powerful in South Africa, where we've had persistent rolling blackouts since 2015.
+
+![Predicted electricity outages in India using a random forest model and VIIRS imagery. Source: @mannUsingVIIRSDay2016](images/remotesensing-08-00711-g006.png){width="800"}
 
 Nightlights paper india?
 

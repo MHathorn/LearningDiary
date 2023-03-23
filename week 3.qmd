@@ -11,13 +11,15 @@ There are many different types of correction and enhancement possible for remote
 
 ### Ratio: Normalised Difference Vegetation Index (NDVI)
 
-Ratio enhancements use the different spectral signatures of different materials in spectral bands to exaggerate specific features. NDVI uses red and near-infrared spectral bands to draw out healthy vegetation, because healthy vegetation reflects highly in the near infrared wavelength and is absorbed in the red red one. Areas with a high NDVI index represent healthy vegetation.
+Ratio enhancements use the different spectral signatures of different materials in spectral bands to exaggerate specific features. NDVI uses red and near-infrared spectral bands to draw out healthy vegetation, because healthy vegetation reflects highly in the near infrared wavelength and is absorbed in the red red one. Areas with a high NDVI index represent healthy vegetation. It's calculated as follows:
+
+$$NDVI= \frac{NIR-Red}{NIR+Red}$$
 
 The image below shows the NDVI for Cape Town in XXX. It's a bit hard to read because of the ocean:
 
 ![Normalised Difference Vegetation Index for Cape Town](images/ndviplotm1.png)
 
-We can get around this by utilising only NDVI values over 0.15. Here the healthy vegetation in the farmland to the North of the city is emphasised. Interestingly, areas that are mountainous or national parks do not register on the NDVI. This may be because of **XX, or YY**:
+We can get around this by utilising only NDVI values over 0.15. Here the healthy vegetation in the farmland to the North of the city is emphasised. Urban areas are white, as is the ocean. Interestingly, areas that are mountainous or national parks (and high in indigenous fynbos vegetation) do not register on the NDVI. This includes the Cape Point peninsula in the South West of the image below. This may be because of **XX, or YY**:
 
 ![NDVI for Cape Town (only showing values above 1.5)](images/ndviplotveg.png)
 

@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week 6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week 6</span></a>
+  <a href="./week 6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 6</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -161,8 +161,8 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="toc-section-number">9.1</span>  Summary</a>
   <ul class="collapse">
-  <li><a href="#object-based-image-analysis" id="toc-object-based-image-analysis" class="nav-link" data-scroll-target="#object-based-image-analysis"><span class="toc-section-number">9.1.1</span>  Object-based Image Analysis</a></li>
-  <li><a href="#sub-pixel-analysis" id="toc-sub-pixel-analysis" class="nav-link" data-scroll-target="#sub-pixel-analysis"><span class="toc-section-number">9.1.2</span>  Sub-pixel Analysis</a></li>
+  <li><a href="#sub-pixel-analysis" id="toc-sub-pixel-analysis" class="nav-link" data-scroll-target="#sub-pixel-analysis"><span class="toc-section-number">9.1.1</span>  Sub-pixel Analysis</a></li>
+  <li><a href="#object-based-image-analysis" id="toc-object-based-image-analysis" class="nav-link" data-scroll-target="#object-based-image-analysis"><span class="toc-section-number">9.1.2</span>  Object-based Image Analysis</a></li>
   <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy"><span class="toc-section-number">9.1.3</span>  Accuracy</a></li>
   </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">9.2</span>  Applications</a></li>
@@ -196,13 +196,27 @@ ul.task-list li input[type="checkbox"] {
 <section id="summary" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">9.1</span> Summary</h2>
 <p>This week we continued with more classification algorithms in GEE. We focused on object-based image analysis and sub-pixel analysis, which I will describe below.</p>
-<section id="object-based-image-analysis" class="level3" data-number="9.1.1">
-<h3 data-number="9.1.1" class="anchored" data-anchor-id="object-based-image-analysis"><span class="header-section-number">9.1.1</span> Object-based Image Analysis</h3>
-<p>This uses a clustering algorithm – one of the most common is Simple Linear Iterative Clustering (SLIC) – to identify areas that are similar to each other and create shapes of similar (homogeneous) or different (heterogeneous) ‘superpixels’.</p>
+<section id="sub-pixel-analysis" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="sub-pixel-analysis"><span class="header-section-number">9.1.1</span> Sub-pixel Analysis</h3>
+<p>This determines the proportion of each landcover type per pixel. Essentially, it works by comparing the reflectance values in each pixel to the ‘ideal’ values of a spectrally pure endmember for that landcover class. The algorithm then infers what is likely to be the dominant landcover class in that pixel, based on probability. Usually, spectrally pure endmembers will be determined through laboratory measurements or controlled experiments. Below is an example of running sub-pixel analysis on Cape Town using polygons that I drew on a Landsat colour composite to classify landcover. From visual inspection, the algorithm performed reasonably well, although large stretches of the nature reserve in Cape Point (the peninsula in the South) have been classified as urban.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sub-pixel_reclassified.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Sub pixel analysis. Green: Natural vegetation; Pink: Urban; Grey: Dry grass</figcaption><p></p>
+</figure>
+</div>
 </section>
-<section id="sub-pixel-analysis" class="level3" data-number="9.1.2">
-<h3 data-number="9.1.2" class="anchored" data-anchor-id="sub-pixel-analysis"><span class="header-section-number">9.1.2</span> Sub-pixel Analysis</h3>
-<p>This determines the proportion of each landcover type per pixel. Essentially, it works by comparing the reflectance values in each pixel to the ‘ideal’ values of a spectrally pure endmember for that landcover class – these values are arrived at through <strong>LABORATORY MEASUREMENTS OR??</strong></p>
+<section id="object-based-image-analysis" class="level3" data-number="9.1.2">
+<h3 data-number="9.1.2" class="anchored" data-anchor-id="object-based-image-analysis"><span class="header-section-number">9.1.2</span> Object-based Image Analysis</h3>
+<p>Object-based image analysis is almost the inverse of sub-pixel analysis: Instead of trying to determine what the landcover class within each pixel might be, it groups pixels together. It does this by identifying areas that are similar to each other and creating shapes of similar (homogeneous) or different (heterogeneous) ‘superpixels’. Here is the output of an object-based image analysis that used Simple Non-Iterative Clustering (SNIC) to create a grid of super pixels (groups of pixels). It then assigned landcover classes using CART:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/super-pixel_classified.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Super pixel analysis. Green: Natural vegetation; Pink: Urban; Grey: Dry grass</figcaption><p></p>
+</figure>
+</div>
+<p>From visual inspection, this actually performed better in identifying that Cape Point is not urban, but it has probably under-estimated the amount of natural vegetation and urban area in the metro as a whole.</p>
+<p>In order to formally assess the accuracy I would need to split the data into a training and testing set last and evaluate its performance. I haven’t done that, but I outline some of the means for evaluating performance below.</p>
 </section>
 <section id="accuracy" class="level3" data-number="9.1.3">
 <h3 data-number="9.1.3" class="anchored" data-anchor-id="accuracy"><span class="header-section-number">9.1.3</span> Accuracy</h3>
@@ -229,6 +243,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="reflections" class="level2" data-number="9.3">
 <h2 data-number="9.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">9.3</span> Reflections</h2>
+<p>Different applications of methods we have learnt elsewhere</p>
+<p>Accuracy measures - enjoy producers/users</p>
 
 
 </section>
@@ -371,7 +387,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week 6.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week 6</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 6</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

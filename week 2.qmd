@@ -3,4 +3,11 @@ title: "week 2"
 bibliography: references.bib
 ---
 
-Insert link to presentation
+Here is a short presentation discussing the Sentinel 1 mission:
+
+```{r echo = FALSE, out.width='40%'}
+xaringanExtra::embed_xaringan(
+  url = "https://mhathorn.github.io/wk2_preso/#1",
+  ratio = "16:9")
+
+```

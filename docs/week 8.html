@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week 6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week 6</span></a>
+  <a href="./week 6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 6</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -190,8 +190,33 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="10"><span class="header-section-number">10</span> Temperature</h1>
 <section id="summary" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">10.1</span> Summary</h2>
-<p>Remote sensing/temperatur</p>
-<p>MODIS?</p>
+<p>This week we covered the role that remote sensing can play in helping cities adapt to and mitigate rising temperatures. The Urban Heat Island is a well-documented <strong>SOURCE SOURCE</strong> phenomenon. It refers to the tendency for built-up areas to have higher temperatures than their surrounds (<strong>check this</strong>). This is a pretty significant problem, given that <strong>the majority of the world’s population live in cities</strong>.</p>
+<p>A key part of the issue is that urban heat islands tend to produce positive feedback loops. This means that they are self-reinforcing, and the effect gets worse over time. Different aspects of the built environment interact with each other and magnify the heating effects of other factors. This image illustrates part of the urban heat island effect: Built up areas have lower rates of evapotranspiration, and tall buildings trap ambient heat. These two mechanisms combine for a larger heating effect:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Featured-image.gif" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.publichealthnotes.com/urban-heat-island-effects-mitigation-measures/">Public Health Notes</a></figcaption><p></p>
+</figure>
+</div>
+<p>From a policy perspective, remote sensing data provides a number of advantages in detecting, understanding, monitoring, and intervening to reduce this effect.</p>
+<p>There are a number of satellites that capture temperature data, including Landsat and the Moderate Resolution Imaging Spectroradiometer (MODIS). MODIS has a high temporal resolution, which allows for 1-2 images a day in most parts of the world.</p>
+<p>Here I’ve calculated mean temperature for the Western Cape using both Landsat and MODIS:</p>
+<p><strong>Landsat:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LANDSAT TEMP.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Mean Landsat temperature for the Western Cape in 2022 (lighter colours represent higher temperatures).</figcaption><p></p>
+</figure>
+</div>
+<p><strong>MODIS:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/MODIS TEMP.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Mean MODIS temperature for the Western Cape in 2022 (lighter colours represent higher temperatures).</figcaption><p></p>
+</figure>
+</div>
+<p>You can see that MODIS captures a lot more of the variation in temperature than Landsat. Interestingly, the MODIS temperature data picks up changes in elevation pretty well: You can see the Cape Fold mountains very clearly in the image above.</p>
+<p>Another interesting dimension, given all of the discussion above about urban heat island effects, is that Cape Town doesn’t really register as having a high temperature in either image. That isn’t all that surprising, however: the bright area in the North is Namaqualand, which is a desert, and the one in the North East is the Karoo, an arid semi-desert region that has been in the grips of a prolonged multi-year drought.</p>
 <p><img src="images/Screenshot 2023-03-12 113210.jpg" class="img-fluid"></p>
 </section>
 <section id="applications" class="level2" data-number="10.2">
@@ -205,7 +230,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="reflections" class="level2" data-number="10.3">
 <h2 data-number="10.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">10.3</span> Reflections</h2>
-<p>I find this complicated - as with so many urban issues, hard to drive systemic change when cities are created by so many small decisions. “Cities are built one land use decision at a time”. Milner court paint colour issue?</p>
+<p>I find this complicated - as with so many urban issues, it’s difficult to drive systemic change when cities are created by so many small decisions. Cities are built one land use decision at a time, and that’s especially the case with something like the urban heat island effect: the cumulative impact of many individual decisions has led to this scenario.</p>
+<p>I remember when, a few years ago, the block of flats that I lived in was due to be repainted. The residents wanted to go with a darker colour because it was fashionable. I tried to object on the basis of the heat impact of the darker colour (I also just didn’t think it looked very nice, so my argument was biased), but there was very little interest in that argument from other residents. I think that’s the case with a lot of this: it’s difficult to understand, in the abstract, how a decision like choosing a paint colour for your building will contribute to global warming. However, when many people think that way, and these small decisions reinforce each other, it adds up to a positive feedback loop that is very difficult to arrest.</p>
+<p>I think that’s a really big advantage to remote sensing data being applied in this way: It makes it possible to quantify existing trends, and model how different interventions will change things in the future.</p>
 
 
 </section>
