@@ -7,19 +7,17 @@ bibliography: references.bib
 
 ## Summary
 
-This week we got into machine learning with Google Earth Engine.
+This week we got into machine learning with Google Earth Engine. We covered a range of supervised machine learning tools -- from simple linear regression (which is a very basic form of machine learning) to Classification and Regression Trees (CART) and Random Forest methods. Earth Engine lets you run all of these methods in just a few lines of code, and they provide a very good way to predict or classify what is happening in an area using remotely sensed data.
 
-We covered a range of **supervised** machine learning tools -- from simple linear regression (which is a very basic form of supervised learning) to Classification and Regression Trees (CART) and Random Forest methods. Earth Engine lets you run all of these methods in just a few lines of code, and they provide a very good way to predict or classify what is happening in an area using remotely sensed data.
-
-This feels like the area where Earth Engine really comes into its own: it's amazing to have such a range of analysis-ready imagery readily available, and to be able to run these algorithms so quickly. I'll discuss CART and Random Forest here, before getting into some of the ways it can be applied.
+This feels like the area where Earth Engine really comes into its own: it's amazing to have such a range of analysis-ready imagery readily available and to be able to run these algorithms so quickly. I'll discuss CART and Random Forest here, before getting into some of the ways they can be applied.
 
 ### CART
 
 CART works by subsetting the data in a series of forks. Each fork is split into a predictor variable and each node has a prediction at the end, as shown below:
 
-![https://www.geeksforgeeks.org/cart-classification-and-regression-tree-in-machine-learning/](images/CARTClassificationAndRegressionTree.jpg)
+![CART ([Geeks for Geeks](https://www.geeksforgeeks.org/cart-classification-and-regression-tree-in-machine-learning/)) ](images/CARTClassificationAndRegressionTree.jpg)
 
-CART can be used on both categorical (classification), as well as continuous (regression) outcome variables. The algorithm splits the data in order to have the lowest mean square error (for continuous data) or gini impurity (for categorical data) in each split. The way that I understand this intuitively is that the model will select the split at each point that **minimises** **the variance** in the resulting subset. In the case of categorical variables, the value for each subset is the majority class of the response variable falling into that category; in the case of continuous data, the output is the mean of the records in the subset. The algorithm will run through this process until it reaches a pre-defined stopping criteria.
+CART can be used on both categorical (classification), as well as continuous (regression) outcome variables. The algorithm splits the data in order to have the lowest mean square error (for continuous data) or gini impurity (for categorical data) in each split. The way that I understand this intuitively is that the model will select the split at each point that minimises the variance in the resulting subsets. In the case of categorical variables, the value for each subset is the majority class of the response variable falling into that category; in the case of continuous data, the output is the mean of the records in the subset. The algorithm will run through this process until it reaches a pre-defined stopping criteria.
 
 So unlike linear regression, where you're trying to arrive at a single coefficient which estimates the slope of a relationship, CART outputs a series of mean values for different subsets of the data (in the case of a continuous outcome variable). This makes it useful for working with nonlinear datasets; the art of using CART is in deciding when and where to stop splitting the data. It's possible to keep going all the way down to individual records in the dataset, in which case the model will be perfectly predictive, but then it is unlikely to generalise well to unseen data as the model will be overfit on the dataset it has been trained on. Conversely, if there are too many records in each subset, the model is likely to be unreliable as a predictor as it will be underfit. This image shows how a decision tree algorithm might subset a two-dimensional dataset with a continuous outcome variable:
 
@@ -41,25 +39,17 @@ There isn't a huge difference between either image -- there's definitely more no
 
 #### **Accuracy**
 
-There are a couple of ways to measure the accuracy of this model. The one I have generated returns an Out of Bag Error Estimate of **14.5%**. This is fairly close to the model's validation accuracy (its performance on unseen data), which was **0.87%**. The training accuracy was much higher, at **99.6%**. I'll talk more about accuracy measures next week.
+There are a couple of ways to measure the accuracy of this model. The one I have generated returns an Out of Bag Error Estimate of **14.5%**. This is fairly close to the model's validation accuracy (its performance on unseen data), which was **0.87%**. The training accuracy was much higher, at **99.6%** (this is unsurprising as it's the result of the model on the data it was trained on). I'll talk more about accuracy measures next week.
 
 ## Applications
 
 There are many ways that these models can and have been applied. There are applications around land cover and land use that I've described above.
 
-@mannUsingVIIRSDay2016 used a Random Forest model to predict instances of power outages in India from nighttime Visible Infrared Imaging Radiometer Suite (VIIRS) imagery, which shows lights on earth at night. They did this by training the model on known instances of power outages using voltage monitoring data from an NGO. A map of their output is shown below. I think this kind of approach would be extremely powerful in South Africa, where we've had persistent rolling blackouts since 2015.
+@mannUsingVIIRSDay2016 used a Random Forest model to predict instances of power outages in India from nighttime Visible Infrared Imaging Radiometer Suite (VIIRS) imagery, which shows lights on earth at night. They did this by training the model on known instances of power outages using voltage monitoring data from an NGO. A map of their output is shown below. I think this kind of approach would be extremely powerful in South Africa, where we've had persistent rolling blackouts since 2015. This image shows one of the outputs of that model:
 
 ![Predicted electricity outages in India using a random forest model and VIIRS imagery. Source: @mannUsingVIIRSDay2016](images/remotesensing-08-00711-g006.png){width="800"}
 
 Elsewhere, @chengIdentifyingDrivingFactors2022 used a Random Forest model and Earth Engine to identify factors that explain urban land expansion in China. It found that elevation, GDP, and per capita income were some of the factors that explained urban expansion in the area in question. I think that this suggests an extension of the approach to the problem of identifying sites vulnerable to informal invasion in Cape Town that I discussed in Week 4: including socioeconomic, topographical, and demographic variables in the model.
-
-LCLU, what else?
-
-Illegal logging
-
-Urban expansion?
-
-Forest fires - canonical example
 
 ## Reflections
 

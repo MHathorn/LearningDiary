@@ -7,9 +7,9 @@ bibliography: references.bib
 
 ## Summary
 
-This week we covered the role that remote sensing can play in helping cities adapt to and mitigate rising temperatures. The Urban Heat Island is a well-documented **SOURCE SOURCE** phenomenon. It refers to the tendency for built-up areas to have higher temperatures than their surrounds (**check this**). This is a pretty significant problem, given that **the majority of the world's population live in cities**.
+This week we covered the role that remote sensing can play in helping cities adapt to and mitigate rising temperatures. The Urban Heat Island is a [well-documented](https://www.epa.gov/green-infrastructure/reduce-urban-heat-island-effect#:~:text=%22Urban%20heat%20islands%22%20occur%20when,heat%2Drelated%20illness%20and%20mortality.) phenomenon. It refers to the tendency for built-up areas to have higher temperatures than their surrounds. This is a pretty significant problem, given that the majority of the world's population live in cities.
 
-A key part of the issue is that urban heat islands tend to produce positive feedback loops. This means that they are self-reinforcing, and the effect gets worse over time. Different aspects of the built environment interact with each other and magnify the heating effects of other factors. This image illustrates part of the urban heat island effect: Built up areas have lower rates of evapotranspiration, and tall buildings trap ambient heat. These two mechanisms combine for a larger heating effect:
+A key part of the issue is that urban heat islands tend to produce positive feedback loops. This means that they are self-reinforcing, and the effect gets worse over time. Different aspects of the built environment interact with each other and magnify the heating effects of other factors. This image illustrates part of the urban heat island effect: Built-up areas have lower rates of evapotranspiration, and tall buildings trap ambient heat. These two mechanisms combine for a larger heating effect:
 
 ![Source: [Public Health Notes](https://www.publichealthnotes.com/urban-heat-island-effects-mitigation-measures/)](images/Featured-image.gif)
 
@@ -27,33 +27,19 @@ Here I've calculated mean temperature for the Western Cape using both Landsat an
 
 ![Mean MODIS temperature for the Western Cape in 2022 (lighter colours represent higher temperatures).](images/MODIS%20TEMP.jpg)
 
-You can see that MODIS captures a lot more of the variation in temperature than Landsat. Interestingly, the MODIS temperature data picks up changes in elevation pretty well: You can see the Cape Fold mountains very clearly in the image above.
+You can see that MODIS captures a lot more of the variation in temperature than Landsat in this case. Interestingly, the MODIS temperature data picks up changes in elevation pretty well: You can see the Cape Fold mountains very clearly in the image above.
 
 Another interesting dimension, given all of the discussion above about urban heat island effects, is that Cape Town doesn't really register as having a high temperature in either image. That isn't all that surprising, however: the bright area in the North is Namaqualand, which is a desert, and the one in the North East is the Karoo, an arid semi-desert region that has been in the grips of a prolonged multi-year drought.
 
-![](images/Screenshot%202023-03-12%20113210.jpg)
-
 ## Applications
 
-Urban heat island
-
 In South Africa, the Council for Scientific and Industrial Research (CSIR) have developed a [model](https://www.csir.co.za/planning-cities-better-manage-rising-temperatures#:~:text=Researchers%20have%20found%20that%20South,surfaces%2C%20used%20in%20urban%20spaces) for understanding temperature in cities. Their model uses temperature projections and spatial information from municipal spatial development frameworks (see week 4) about urban surfaces to understand how rising temperatures might be mitigated in different cities. The CSIR website doesn't say whether remote sensing data was used in their model, but there is a clear case for integrating it if it doesn't, and it would be interesting to see how the model outputs might change if its predictions were based on remote sensing inputs rather than global temperature projections.
-
-There are numerous examples of using remote sensing data to map or understand the urban heat island effect: **XX, XX, and XX.**
 
 However, it's also important to have a full understanding of the phenomenon under study, as @parlowRegardingPitfallsUrban2021 discusses. In this study, the authors note that many of the current papers simplify the urban heat island effect by failing to account for how the data was collected or what it represents. There are several pitfalls to this approach, one of which is the fact that most remotely sensed data will be reading temperature at the roof level. This image shows this effect:
 
 ![Left: Surface temperatures in Basel. Middle: Sky-view factor (visible sky above a pixel). Right: Percentage of roof cover [@parlowRegardingPitfallsUrban2021]](images/remotesensing-13-03598-g005.png)
 
-It's easy to see how this could lead to inaccurate results, as high temperatures on rooftops don't necessarily mean that people on the ground are experiencing elevated temperatures! That's not to say that the urban heat island effect doesn't exist -- **it clearly does** -- but it is to stress the importance of ground-truthing remotely sensed data, and having a full understanding of how data was collected and what it really shows.
-
-NUA/SDG
-
-https://www.health.gov.za/wp-content/uploads/2022/06/National-Heat-Health-Action-Guidelines.pdf
-
-Superblocks
-
-Does surface coating work?
+It's easy to see how this could lead to inaccurate results, as high temperatures on rooftops don't necessarily mean that people on the ground are experiencing elevated temperatures! That's not to say that the urban heat island effect doesn't exist -- this is not what the paper is trying to say -- but it is to stress the importance of ground-truthing remotely sensed data, and having a full understanding of how data was collected and what it really shows.
 
 ## Reflections
 
@@ -62,3 +48,5 @@ I find this complicated - as with so many urban issues, it's difficult to drive 
 I remember when, a few years ago, the block of flats that I lived in was due to be repainted. The residents wanted to go with a darker colour because it was fashionable. I tried to object on the basis of the heat impact of the darker colour (I also just didn't think it looked very nice, so my argument was biased), but there was very little interest in that argument from other residents. I think that's the case with a lot of this: it's difficult to understand, in the abstract, how a decision like choosing a paint colour for your building will contribute to global warming. However, when many people think that way, and these small decisions reinforce each other, it adds up to a positive feedback loop that is very difficult to arrest.
 
 I think that's a really big advantage to remote sensing data being applied in this way: It makes it possible to quantify existing trends, and model how different interventions will change things in the future.
+
+As a final fun reflection, [here's a link](https://grand-tuck-757.notion.site/Urban-Heat-Island-Interpretive-Dance-5a97bd9ac958489188ab689db54e59a8) to a video my classmates and I made to explain the urban heat island effect with interpretive dance!
