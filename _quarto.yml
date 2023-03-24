@@ -8,7 +8,7 @@ book:
   date: "2023/01/29"
   chapters:
     - index.qmd
-    - Week 1.qmd
+    - week 1.qmd
     - week 2.qmd
     - week 3.qmd
     - week 4.qmd
