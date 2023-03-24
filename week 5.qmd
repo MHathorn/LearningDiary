@@ -9,13 +9,13 @@ bibliography: references.bib
 
 This week we dived into Google Earth Engine, which has dramatically accelerated the field of remote sensing. I have to say that it was a relief to start using Earth Engine -- I found the process of having to manually download and process images in SNAP or QGIS quite cumbersome and time-consuming. That's the main advantage of Earth Engine: the fact that it dramatically reduces processing time and eases computational resources.
 
-This week we covered "reducing" -- essentially, aggregation functions to provide a particular value (such as the median) for each pixel, as well as linear regression and spatial joins. We also ran PCA, which was eye-opening after week three when I ran PCA in R. This time, it ran in a few seconds.
+This week we covered "reducing" -- essentially, aggregation functions to provide a particular value (such as the median) for each pixel, as well as linear regression and spatial joins. We also ran a few of the enhancement measures I discussed earlier, including PCA, which was eye-opening after week three when I ran PCA in R. This time, it ran in a few seconds.
 
 Anyway, here's the NDVI for Cape Town using landsat imagery from January 2022. I think that this has returned a better result than the NDVI measure I calculated in Week 3: Here, the highest values are on table mountain and in the mountainous area in the Southeast -- these are nature reserves covered in indigenous fynbos vegetation. There's also a scar visible in Cape Point, the Southwestern peninsula, from a [fire](https://www.sapeople.com/2018/03/02/photos-cape-point-fire-south-africa/) that occurred at the peak of the drought in 2018:
 
 ![](images/NDVI_GEE.jpg)
 
-And here is the GLCM texture measure from the same imagery = this looks to be highlighting high reflectance areas like industrial activity, informal areas, and that same scar from the fire:
+And here is the GLCM texture measure from the same imagery -- this looks to be highlighting high reflectance areas like industrial activity, informal areas, and that same scar from the fire:
 
 ![](images/GLCM_GEE.jpg)
 
@@ -27,7 +27,7 @@ The biggest takeaway from this was how quickly all of this ran -- when I perform
 
 ## Applications
 
-The applications for Google Earth Engine are almost limitless! Earth Engine really changed things by making remote sensing analysis faster and more accessible (you don't have to download huge amounts of data and then spend ages processing giant raster files). So the applications are not necessarily different to what was possible before, but it has really opened up the scale and creativity of analysis. This image below sums up the range of applications that are possible with Earth Engine:
+The applications for Google Earth Engine are really extensive. Earth Engine really changed things by making remote sensing analysis faster and more accessible (you don't have to download huge amounts of data and then spend ages processing giant raster files). So the applications are not necessarily different to what was possible before, but it has really opened up the scale and creativity of analysis. This image below sums up the range of applications that are possible with Earth Engine:
 
 ![Google Earth Engine applications ([IEEE Xplore](https://ieeexplore.ieee.org/document/9184118))](images/amani7-3021052-large.gif)
 
@@ -35,7 +35,7 @@ Earth Engine has made planetary-scale analysis and monitoring of all sorts of ph
 
 One area that I think is really interesting is the way Earth Engine has opened up the use of near real-time remotely sensed data. An example is [Map of Life](https://species.mol.org/species/map/Perdix_dauurica), which predicts the locations for habitats of endangered species using Earth Engine. The map is updated on-the-fly as new data comes in.
 
-Sadly, an aspect of Earth Engine that is limited is that it's not possible to use SAR phase data for InSAR analysis in Earth Engine**.** That's quite frustrating, because I think it would be really interesting to use phase data (which uses the change in a radio wave's phase instead of amplitude) to monitor changes in height in informal settlements. There's been a lot of informal vertical densification in Cape Town over the last few years, and using SAR phase data to monitor the change in height over time would be an interesting way to understand and quantify the extent of this. That's not to say it wouldn't be possible to do this, but one would have to use SNAP or similar software in order to do it with phase data at the moment.
+Sadly, an aspect of Earth Engine that is limited is that it's not possible to use it for InSAR analysis of phase data. That's quite frustrating, because I think it would be really interesting to use SAR phase data (which uses the change in a radio wave's phase instead of amplitude) to monitor changes in height in informal settlements. There's been a lot of informal vertical densification in Cape Town over the last few years, and using InSAR data to monitor the change in height over time would be an interesting way to understand and quantify the extent of this. That's not to say it wouldn't be possible to do this, but one would have to use SNAP or similar software in order to do it with phase data at the moment.
 
 ## Reflections
 

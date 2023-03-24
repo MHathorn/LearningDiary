@@ -51,7 +51,7 @@ PCA can be used for a variety of remote sensing applications, such as feature ex
 
 ## Reflections
 
-I've skirted around corrections here and focused on enhancement, probably because enhancement feels exciting and interesting (they let you draw out interesting features of the data) whereas corrections feel painstaking and time-consuming. I know they're important, but it's also really exciting to put PCA into use (even if my example above is pretty trivial and doesn't really offer much more than a grayscale map of Cape Town).
+I've skirted around corrections here and focused on enhancement, probably because enhancements feel exciting and interesting (they let you draw out interesting features of the data) whereas corrections feel painstaking and time-consuming. I know they're important, but it's also really exciting to put PCA into use (even if my example above is pretty trivial and doesn't really offer much more than a grayscale map of Cape Town).
 
 I first encountered PCA last term in the Foundations of Spatial Data Science module. At the time I found it completely intimidating and had to really work in order to understand it. Now I think I get it conceptually (although performing the linear algebra used to transform the dimensionality reduction is beyond me), and it's fun to be able to use it and understand how and why it's useful.
 

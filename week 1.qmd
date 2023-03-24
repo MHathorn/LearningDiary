@@ -7,7 +7,7 @@ bibliography: references.bib
 
 ## What is remote sensing?
 
-Remote sensing is a subset of Geographic Information Science (GIS), and broadly refers to the science (and art) of using remote instruments -- sensors mounted on satellites or planes -- to record information remotely. This week, I will cover some sources of remote sensing data, as well as some applications of its use.
+Remote sensing is a subset of Geographic Information Science (GIS). Broadly, it refers to the science (and art) of using remote instruments -- sensors mounted on satellites or planes -- to record information remotely. This week, I will cover some sources of remote sensing data, as well as some applications of its use.
 
 ## **Active and passive sensors**
 
@@ -27,17 +27,17 @@ The figure below shows the electromagnetic spectrum, and different instruments t
 
 Remote sensing data has four resolutions, namely:
 
-**Spectral:** The number of bands that the sensor records (for example, red, green, blue for visible light)
+**Spectral:** The number of bands that the sensor records (for example, red, green, blue for visible light).
 
-**Spatial:** The size of each pixel (this can go down to centimetres for very high resolution data or be up to over a kilometre for some purposes)
+**Spatial:** The size of each pixel (this can go down to centimetres for very high resolution data or be up to over a kilometre for some purposes).
 
-**Temporal:** The frequency with which a given area will be revisited (there is often a tradeoff between spatial and temporal resolution, as a lower spatial resolution allows for more of the earth's surface to be captured and hence a higher temporal resolution)
+**Temporal:** The frequency with which a given area will be revisited (there is often a tradeoff between spatial and temporal resolution, as a lower spatial resolution allows for more of the earth's surface to be captured and hence a higher temporal resolution).
 
-**Radiometric:** The range of reflectance values
+**Radiometric:** The range of reflectance values.
 
 # Applications
 
-In my view, the most exciting applications for remote sensing data are in situations where traditional forms of data collection -- such as a national census -- are unreliable or out of date. This is true of South Africa, where obtaining up-to-date demographic or economic information is very difficult. This has led to one private sector company effectively cornering the market on spatially disaggregated demographic data. I'll discuss that a bit more in week 4, when I get into policy.
+In my view, the most exciting applications for remote sensing data are in situations where traditional forms of data collection -- such as a national census -- are unreliable or out of date. This is true of South Africa, where obtaining up-to-date demographic or economic information is very difficult. I'll discuss that a bit more in week 4, when I get into policy.
 
 There are many applications of Remote Sensing, and they tend to overlap quite a bit, but since the practical covered imagery from Sentinel 2 and Landsat 8, I'll cover some interesting applications of these two sources of imagery here:
 
@@ -57,7 +57,7 @@ The temporal and spatial resolution of sentinel-2 makes it possible to monitor i
 
 ### Landsat
 
-Landsat has been around for more than 50 years now -- the first Landsat satellite went up in 1972. One of the [earliest applications](https://landsat.gsfc.nasa.gov/article/landsat-island/) of Landsat was 'discovering' a previously uncharted island off the coast of Canada (it's possible the island had been discovered previously but not documented). Today the island is called Landsat Island, after its discoverer.
+Landsat has been around for more than 50 years now -- the first Landsat satellite went up in 1972. One of the [earliest applications](https://landsat.gsfc.nasa.gov/article/landsat-island/) of Landsat was 'discovering' a previously uncharted island off the coast of Canada (it's possible the island had been discovered previously but not documented). Today the island is called Landsat Island, after its 'discoverer'.
 
 ![Landsat Island (Source: [NASA](https://landsat.gsfc.nasa.gov/article/landsat-island/))](images/LC80130182014196LGN00_753p_cropzoom_fin-300x300.png)
 
