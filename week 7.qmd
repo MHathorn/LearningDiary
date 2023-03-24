@@ -41,8 +41,7 @@ The **f1 score** is the harmonic mean of user's accuracy and producer's accuracy
 
 $$F1= \frac{2 * User's\ Accuracy * Producer's\ Accuracy}{User's\ Accuracy + Producer's\ Accuracy}$$
 
-## 
-Applications
+## Applications
 
 Advanced classification methods for land use and land cover have really expanded recently. @brownDynamicWorldRealtime2022 created a model that updates global land use and land cover in near real-time. They use a deep learning algorithm to do it, and it's hosted on Earth Engine -- you can take a look [here](https://dynamicworld.app/explore).
 
