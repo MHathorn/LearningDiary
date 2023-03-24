@@ -1,9 +1,13 @@
-# Preface {.unnumbered}
+# About {.unnumbered}
 
-This is a Quarto book.
+![](images/000019.jpg){width="1200"}
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Hi! I'm Mike. I'm an urban planner by training, but my first degree was in English Literature. I have six years of experience working in the creative industry, during which time I did a range of things -- copywriting, content strategy, a bit of photography and directing of short films.
 
-```{r}
-1 + 1
-```
+I transitioned to planning in 2019, completing a Master's degree in City and Regional Planning at the University of Cape Town. Subsequent to that I worked for the Western Cape Provincial government. The highlight of my time there was working on an [Inclusionary Housing Policy Framework](https://www.westerncape.gov.za/eadp/news/western-cape-government-first-adopt-inclusionary-housing-policy) for the province.
+
+I've always enjoyed data and working with numbers, which is what drew me to my current pursuit: an MSc Urban Spatial Science at University College London's Centre for Advanced Spatial Analysis. This site is a learning diary for one of my modules, Remotely Sensing cities and Environments. I hope that you enjoy it! It contains my thoughts and learnings for each week of the course. Where possible, I've used imagery from Cape Town or the Western Cape to illustrate the techniques we were taught, because I know the area and it helps me to interpret the results.
+
+For something a bit different, here's a video that I worked on with one of my [colleagues](https://dribbble.com/bashwax) from the creative industry to describe the Inclusionary Housing Policy Framework that I worked on while at the provincial government:
+
+{{< video https://youtu.be/_KF0V7J7zFY >}}

@@ -51,7 +51,7 @@ There are many ways that these models can and have been applied. There are appli
 
 ![Predicted electricity outages in India using a random forest model and VIIRS imagery. Source: @mannUsingVIIRSDay2016](images/remotesensing-08-00711-g006.png){width="800"}
 
-Nightlights paper india?
+Elsewhere, @chengIdentifyingDrivingFactors2022 used a Random Forest model and Earth Engine to identify factors that explain urban land expansion in China. It found that elevation, GDP, and per capita income were some of the factors that explained urban expansion in the area in question. I think that this suggests an extension of the approach to the problem of identifying sites vulnerable to informal invasion in Cape Town that I discussed in Week 4: including socioeconomic, topographical, and demographic variables in the model.
 
 LCLU, what else?
 
@@ -63,6 +63,8 @@ Forest fires - canonical example
 
 ## Reflections
 
-Very powerful - but lack of explainability a limitation, especially in a policy context
+These techniques are clearly extremely powerful, and the applications I've described above can be employed to answer very relevant policy questions in South Africa. The big concern with all of these models is the data that they are supervised on -- it's very easy to train a model on data that is biased in some way, with the output being accordingly influenced. Given that I've described uses that apply to informal contexts, this is a particular concern, especially given the [history of racial bias in machine learning algorithms](https://www.theguardian.com/inequality/2017/aug/08/rise-of-the-racist-robots-how-ai-is-learning-all-our-worst-impulses).
 
-Covered these techniques elsewhere, but in a mostly theoretical context. Very interesting to see how they can actually be applied to remotely sensed data. Spatial resolution of most freely available imagery is a concern for most urban applications - difficult to differentiate between land uses within an area for example, as most buildings will be significantly smaller than the resolution of the pixels.
+Similarly, interpreting the output of a decision tree classifier or random forest is not nearly as simple as reading the coefficient and intercept from a linear regression model. This also has challenges in the policy space, as it's not possible to succinctly describe which inputs are influencing the outcome variable based on the results of one of these algorithms. Nevertheless, they are very powerful, and they certainly have their place in shaping better policy.
+
+On another note, it's fun to start to put these techniques into practice. I've covered decision trees and random forests in other modules, but in a mostly theoretical context. It's interesting to see how they can actually be applied to remotely sensed data, and I'm really impressed by how well the random forest classifier started to pick up the structure of Cape Town above -- I didn't visualise it very well, and it definitely needs better training inputs (see my note about bias above), but it's definitely starting to create a coherent picture of Cape Town's defining urban features.

@@ -75,7 +75,7 @@ One interesting recent application of Sentinel-2 was when it was used to detect 
 
 It can also be used for monitoring sea ice, as this (very promotional) video shows -- just watch the part between 2 and 3 minutes:
 
-{{< video https://youtu.be/5QiQlfob-f8?t=123 >}}
+{{< video https://youtu.be/5QiQlfob-f8 >}}
 
 The temporal and spatial resolution of sentinel-2 makes it possible to monitor individual glaciers and see how they interact with the oceans around them. Pretty exciting!
 

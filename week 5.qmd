@@ -1,5 +1,5 @@
 ---
-title: "week 5"
+title: "Week 5"
 bibliography: references.bib
 ---
 
@@ -13,7 +13,7 @@ This week we covered "reducing" -- essentially, aggregation functions to provide
 
 **Insert video here**
 
-And here's the NDVI for Cape Town using landsat imagery from XX to XX:
+And here's the NDVI for Cape Town using landsat imagery from **XX to XX**. I think that this has returned a significantly better result than the NDVI measure I calculated in Week 3: Here, the highest values are on table mountain and in the mountainous area in the Southeast -- these are nature reserves covered in indigenous fynbos vegetation. There's also a scar visible in Cape Point, the Southwestern peninsula, from a [fire](https://www.sapeople.com/2018/03/02/photos-cape-point-fire-south-africa/) that occurred at the peak of the drought in 2018:
 
 ![](images/NDVI_GEE.jpg)
 
@@ -25,25 +25,31 @@ And finally the first principal component from PCA:
 
 ![](images/PC1_GEE.jpg)
 
-### Setup
-
-XXX
-
-### 
+The biggest takeaway from this was how quickly all of this ran -- when I performed PCA in Week 3, I started the process and went out for a run because it was taking so long to finish. In Earth Engine, I ran all of the analyses above (NDVI, texture, and PCA) in a few minutes.
 
 ## Applications
 
-The applications for Google Earth Engine are really limitless! Earth Engine really changed things by making remote sensing analysis faster and more accessible (you don't have to download huge amounts of data and then spend ages processing giant raster files). So the applications are not necessarily different to what was possible before, but it has really opened up the scale and creativity of analysis.
+The applications for Google Earth Engine are almost limitless! Earth Engine really changed things by making remote sensing analysis faster and more accessible (you don't have to download huge amounts of data and then spend ages processing giant raster files). So the applications are not necessarily different to what was possible before, but it has really opened up the scale and creativity of analysis. This image below sums up the range of applications that are possible with Earth Engine:
 
 ![GEE applications](images/amani7-3021052-large.gif)
 
 https://ieeexplore.ieee.org/document/9184118
 
-![](images/Screenshot%202023-03-21%20172752.jpg)
+Earth Engine has made planetary-scale analysis and monitoring of all sorts of phenomena possible. One example is [Global Forest Watch](https://www.globalforestwatch.org/map/?map=eyJjZW50ZXIiOnsibGF0IjotMS44NDE2OTQwNDcwNjQzNDA0LCJsbmciOjE3LjQ0ODQ0MTc4MTA2NzQ5fX0%3D&mapPrompts=eyJvcGVuIjp0cnVlLCJzdGVwc0tleSI6InN1YnNjcmliZVRvQXJlYSJ9), where you can easily view changes in tree cover for the entire planet at a range of temporal scales.
 
-PCA - very quick
+One area that I think is really interesting is the way Earth Engine has opened up the use of near real-time remotely sensed data. An example is [Map of Life](https://species.mol.org/species/map/Perdix_dauurica), which predicts the locations for habitats of endangered species using Earth Engine. The map is updated on-the-fly as new data comes in.
+
+**Damage assessment?**
+
+One area that's limited is that it's not possible to use SAR phase data for INSAR analysis in Earth Engine -- I believe because the data structure is too complicated **CHECK.** That's quite frustrating, because I think it would be really interesting to use phase data (which monitors the change in a radio wave's phase instead of amplitude) to monitor changes in height in informal settlements. There's been a lot of informal vertical densification in Cape Town over the last few years, and using SAR phase data to monitor the change in height would be an interesting way to understand and quantify the extent of this. That's not to say it wouldn't be possible to do this, but one would have to use SNAP or similar software in order to do it with phase data at the moment.
 
 ## Reflections
+
+Earth engine is really fun! I have to be honest and admit that I've been waiting most of the module to get into it. I like how easy to use it is, and the fact that you can get straight into working with analysis-ready data. I was worried about using Javascript at first, but the amount of Javascript you need is not too extensive, and there is a wealth of tutorials out there. There are some things that I find peculiar -- like the fact that you can't run code chunks and have to run the whole script every time -- but I think that's just part of learning and adapting.
+
+It's also strange how simple things like adding a legend turn out to be quite difficult in Earth Engine. It's possible, but it involves a lot of extra work and an additional script for each legend, so I've left them out for my outputs in this learning diary (my apologies in advance for this).
+
+I guess the biggest systemic risk with Earth Engine is that Google could decide to pull the product at any time. At the moment it seems too good to be true -- it's such a powerful service, and it's completely free for individual users. That doesn't seem like a sustainable business model for Google, and I suspect that it's a matter of time before they start charging for access. Until then, I'll continue to enjoy using it...
 
 Analysis ready data?
 

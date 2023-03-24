@@ -1,5 +1,5 @@
 ---
-title: "week 8"
+title: "Week 8"
 bibliography: references.bib
 ---
 
@@ -37,7 +37,15 @@ Another interesting dimension, given all of the discussion above about urban hea
 
 Urban heat island
 
-https://www.csir.co.za/planning-cities-better-manage-rising-temperatures#:\~:text=Researchers%20have%20found%20that%20South,surfaces%2C%20used%20in%20urban%20spaces.
+In South Africa, the Council for Scientific and Industrial Research (CSIR) have developed a [model](https://www.csir.co.za/planning-cities-better-manage-rising-temperatures#:~:text=Researchers%20have%20found%20that%20South,surfaces%2C%20used%20in%20urban%20spaces) for understanding temperature in cities. Their model uses temperature projections and spatial information from municipal spatial development frameworks (see week 4) about urban surfaces to understand how rising temperatures might be mitigated in different cities. The CSIR website doesn't say whether remote sensing data was used in their model, but there is a clear case for integrating it if it doesn't, and it would be interesting to see how the model outputs might change if its predictions were based on remote sensing inputs rather than global temperature projections.
+
+There are numerous examples of using remote sensing data to map or understand the urban heat island effect: **XX, XX, and XX.**
+
+However, it's also important to have a full understanding of the phenomenon under study, as @parlowRegardingPitfallsUrban2021 discusses. In this study, the authors note that many of the current papers simplify the urban heat island effect by failing to account for how the data was collected or what it represents. There are several pitfalls to this approach, one of which is the fact that most remotely sensed data will be reading temperature at the roof level. This image shows this effect:
+
+![Left: Surface temperatures in Basel. Middle: Sky-view factor (visible sky above a pixel). Right: Percentage of roof cover [@parlowRegardingPitfallsUrban2021]](images/remotesensing-13-03598-g005.png)
+
+It's easy to see how this could lead to inaccurate results, as high temperatures on rooftops don't necessarily mean that people on the ground are experiencing elevated temperatures! That's not to say that the urban heat island effect doesn't exist -- **it clearly does** -- but it is to stress the importance of ground-truthing remotely sensed data, and having a full understanding of how data was collected and what it really shows.
 
 NUA/SDG
 

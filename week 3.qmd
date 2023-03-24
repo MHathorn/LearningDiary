@@ -37,13 +37,17 @@ Principal Component Analysis (PCA) is a dimensionality reduction method -- it al
 
 ## Applications
 
-Of the three techniques I have described above, NDVI probably has the most obvious practical application. It's easy to see how a vegetation index can be useful for monitoring and predicting crop yields, fire hazards, and **XXX**. The examples I've given for texture analysis and PCA are less clear in their immediate use, but that doesn't mean they aren't extremely powerful. Texture can, for example, be used for change detection (LINK) or to classify different land uses. This video, particularly from 17:38 to 20:15, discusses some applications of texture in remote sensing data:
+Of the three techniques I have described above, NDVI probably has the most obvious practical application. It's easy to see how a vegetation index can be useful for monitoring and predicting crop yields, fire hazards, and drought impacts. [This article](https://gisgeography.com/ndvi-normalized-difference-vegetation-index/) discusses how it can be used for precision farming by classifying vegetation as this image shows:
 
-{{< video https://youtu.be/GGejk18Fqhc?t=1058 >}}
+![An example of NDVI applied to agriculture. Irrigated areas show up as brighter in the image (Source: [GIS Geography](https://gisgeography.com/ndvi-normalized-difference-vegetation-index/))](images/pivot-irrigation-ndvi.png)
+
+The images I've generated for texture analysis and PCA are less clear in their immediate use, but that doesn't mean they aren't extremely powerful. Texture can, for example, be used for change detection (LINK) or to classify different land uses. This video, particularly from 17:38 to 20:15, discusses some applications of texture in remote sensing data:
+
+{{< video https://youtu.be/GGejk18Fqhc >}}
 
 Basically, texture is used to retrieve the areas of an image that are most similar to a target area. It's very easy to see how that might be relevant to a remote sensing application in an urban environment -- it could be used to identify open space, informal areas, flood-prone areas, or a host of different things.
 
-PCA can be used for a variety of remote sensing applications, such as feature extraction, change detection, and classification.
+PCA can be used for a variety of remote sensing applications, such as feature extraction, change detection, and classification. And it's not particularly new! @munyatiUsePrincipalComponent2004 used PCA to detect wetland change in Zambia using imagery from the 1980s and 90s. The study ran PCA on a 12-band image to generate a colour composite that highlighted change detection in the wetland system over time.
 
 Other applications include estimating the roughness of soil, as this study does:
 

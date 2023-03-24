@@ -25,7 +25,13 @@ That's why it's extremely important in South Africa to have clear planning polic
 
 The Cape Town MSDF is summed up in this image, which has been nicknamed the 'blue turtle' by planners in South Africa -- the blue areas (which resemble a turtle) are the areas of the city where development is encouraged:
 
-![The City of Cape Town MSDF](images/Ch5_M5d_Consolidated_Spatial_Plan_Concept.jpg)
+![The City of Cape Town MSDF [@cityofcapetownCityCapeTown2022]](images/Ch5_M5d_Consolidated_Spatial_Plan_Concept.jpg)
+
+One of the key issues highlighted in the MSDF is the need to stop urban expansion, and to keep developing within the 'blue turtle'. This has been difficult to do for many reasons, including the increase of gated private developments on the urban periphery. A serious issue that has been on the rise since COVID-19 is informal land invasion. This is a complex issue that is driven by deep poverty, inequality, and housing shortages, and those root causes need to be addressed. However, the consequences of informal expansion are serious, as sites meant for facilities like housing, schools or clinics are no longer available. Last year, Driftsands Nature Reserve had to be [decommissioned](https://www.iol.co.za/capeargus/news/de-proclamation-of-driftsands-nature-reserve-sets-dangerous-precedent-says-experts-ce20a52f-235e-48ad-ba25-7b29b0678463) as it had been occupied illegally, and the ecosystem was degraded.
+
+The MSDF highlights this issue as follows:
+
+> The urban development edge has made provision for development opportunities at strategically located expansion areas located close to areas of intense urbanisation pressures, mass land invasion, significant levels of persistent informality and increasing levels of unauthorised occupation of land nullifying scheduled government housing projects [@cityofcapetownCityCapeTown2022].
 
 This video talks about the MSDF's approach to housing, which is where I believe remote sensing data has significant application for the city:
 
@@ -33,9 +39,11 @@ This video talks about the MSDF's approach to housing, which is where I believe 
 
 ## Applications
 
-Key issues: informality, growth, unmet demant
+The city uses remote sensing data quite a lot already, and Cape Town has high resolution LIDAR data that has been used to map informal settlements in the city by @shokoLiDARDerivedShack2022. I think that, given the issues with housing supply highlighted above, and the increasing issue with informal land invasions happening in the city, the city could explore using remote sensing data to identify areas that may be vulnerable to future invasion.
 
-Solutions: LIDAR dude,
+This is an idea that was proposed by @tellmanIdentifyingProjectingEvaluating2022 in Mexico City. The authors of that study wanted to remotely sensed imagery to urban policy in order to identify areas that may be vulnerable. However, their method was not possible without high-resolution time-series data. It would be interesting for the City of Cape Town to explore developing a similar model using [Worldview](https://earth.esa.int/eogateway/missions/worldview-3) imagery. A fairly straightforward approach would be to train a classification model on sites that have recently been invaded, along with the areas adjacent to them, and use the model to identify similar areas. These sites could then be evaluated qualitatively to determine whether they should be given additional protection.
+
+Issues around informality are complex, and there is a lot of nuance that I've left out above. The city's first obligation has to be addressing the root causes that are driving increasing levels of informality. But it's also true that, as more sites are invaded, the city's ability to do that is compromised, as it has less land to work with to deliver the infrastructure that's needed to address the bigger problem. I think that a classification algorithm trained on high-resolution imagery could be a simple intervention that helps to identify which areas are in need of additional protection.
 
 ## Reflections
 

@@ -1,9 +1,9 @@
 ---
-title: "week 2"
+title: "Week 2"
 bibliography: references.bib
 ---
 
-Here is a short presentation discussing the Sentinel 1 mission:
+Here is a short presentation discussing the Sentinel 1 mission (technically this is two satellites and not 1):
 
 ```{r echo = FALSE, out.width='40%'}
 xaringanExtra::embed_xaringan(
