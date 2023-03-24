@@ -120,7 +120,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week 1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1</span></a>
+  <a href="./week 1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -210,19 +210,19 @@ div.csl-indent {
 <h1 data-number="4"><span class="header-section-number">4</span> Week 3: Enhancements</h1>
 <section id="summary" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
-<p>There are many different types of correction and enhancement possible for remote sensing. Corrections typically are typically applied to remove flaws created by the sensor, atmosphere, or terrain. However, for the purpose of this week, I am going to focus on a couple of enhancements of remote sensing imagery – namely <strong>Ratio, Texture</strong>, and <strong>Principal Component Analysis (PCA)</strong>.</p>
+<p>There are many different types of correction and enhancement possible for remote sensing. Corrections typically are typically applied to remove flaws created by the sensor, atmosphere, or terrain. However, for the purpose of this week, I am going to focus on a couple of enhancements of remote sensing imagery – namely Ratio, Texture, and Principal Component Analysis (PCA).</p>
 <section id="ratio-normalised-difference-vegetation-index-ndvi" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="ratio-normalised-difference-vegetation-index-ndvi"><span class="header-section-number">4.1.1</span> Ratio: Normalised Difference Vegetation Index (NDVI)</h3>
 <p>Ratio enhancements use the different spectral signatures of different materials in spectral bands to exaggerate specific features. NDVI uses red and near-infrared spectral bands to draw out healthy vegetation, because healthy vegetation reflects highly in the near infrared wavelength and is absorbed in the red red one. Areas with a high NDVI index represent healthy vegetation. It’s calculated as follows:</p>
 <p><span class="math display">\[NDVI= \frac{NIR-Red}{NIR+Red}\]</span></p>
-<p>The image below shows the NDVI for Cape Town in XXX. It’s a bit hard to read because of the ocean:</p>
+<p>The image below shows the NDVI for Cape Town using Landsat imagery from 2022. It’s a bit hard to read because of the ocean:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/ndviplotm1.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Normalised Difference Vegetation Index for Cape Town</figcaption><p></p>
 </figure>
 </div>
-<p>We can get around this by utilising only NDVI values over 0.15. Here the healthy vegetation in the farmland to the North of the city is emphasised. Urban areas are white, as is the ocean. Interestingly, areas that are mountainous or national parks (and high in indigenous fynbos vegetation) do not register on the NDVI. This includes the Cape Point peninsula in the South West of the image below. This may be because of <strong>XX, or YY</strong>:</p>
+<p>We can get around this by utilising only NDVI values over 0.15. Here the healthy vegetation in the farmland to the North of the city is emphasised. Urban areas are white, as is the ocean. Interestingly, areas that are mountainous or national parks (and high in indigenous fynbos vegetation) do not register on the NDVI. This includes the Cape Point peninsula in the South West of the image below. This may be due to the time of year and the unharvested agricultural areas being extremely high in NDVI relative to indigenous vegetation:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/ndviplotveg.png" class="img-fluid figure-img"></p>
@@ -242,7 +242,7 @@ div.csl-indent {
 </section>
 <section id="pca" class="level3" data-number="4.1.3">
 <h3 data-number="4.1.3" class="anchored" data-anchor-id="pca"><span class="header-section-number">4.1.3</span> PCA</h3>
-<p>Principal Component Analysis (PCA) is a dimensionality reduction method – it allows you to reduce a high dimensional dataset (like a multi-spectral raster file with many bands) into a lower number of dimensions. The first component (or dimension) is selected to explain as much of the variance as possible in each observation. That’s what this image shows: the first principal component for the imagery used above:</p>
+<p>Principal Component Analysis (PCA) is a dimensionality reduction algorithm – it allows you to reduce a high dimensional dataset (like a multi-spectral raster file with many bands) into a lower number of dimensions. The first component (or dimension) is selected to explain as much of the variance as possible in each observation. That’s what this image shows: the first principal component for the imagery used above:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/pca.png" class="img-fluid figure-img"></p>
@@ -260,19 +260,17 @@ div.csl-indent {
 <p></p><figcaption class="figure-caption">An example of NDVI applied to agriculture. Irrigated areas show up as brighter in the image (Source: <a href="https://gisgeography.com/ndvi-normalized-difference-vegetation-index/">GIS Geography</a>)</figcaption><p></p>
 </figure>
 </div>
-<p>The images I’ve generated for texture analysis and PCA are less clear in their immediate use, but that doesn’t mean they aren’t extremely powerful. Texture can, for example, be used for change detection (LINK) or to classify different land uses. This video, particularly from 17:38 to 20:15, discusses some applications of texture in remote sensing data:</p>
+<p>The images I’ve generated for texture analysis and PCA are less clear in their immediate use, but that doesn’t mean they aren’t extremely powerful. Texture can, for example, be used for change detection or to classify different land uses. This video, particularly from 17:38 to 20:15, discusses some applications of texture in remote sensing data:</p>
 <div class="quarto-video ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/GGejk18Fqhc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>Basically, texture is used to retrieve the areas of an image that are most similar to a target area. It’s very easy to see how that might be relevant to a remote sensing application in an urban environment – it could be used to identify open space, informal areas, flood-prone areas, or a host of different things.</p>
+<p>Basically, texture is used to retrieve the areas of an image that are most similar to a target area. It’s very easy to see how that might be relevant to a remote sensing application in an urban environment – it could be used to identify open space, informal areas, flood-prone areas, or a host of different aspects of the built environment.</p>
 <p>PCA can be used for a variety of remote sensing applications, such as feature extraction, change detection, and classification. And it’s not particularly new! <span class="citation" data-cites="munyatiUsePrincipalComponent2004">Munyati (<a href="references.html#ref-munyatiUsePrincipalComponent2004" role="doc-biblioref">2004</a>)</span> used PCA to detect wetland change in Zambia using imagery from the 1980s and 90s. The study ran PCA on a 12-band image to generate a colour composite that highlighted change detection in the wetland system over time.</p>
-<p>Other applications include estimating the roughness of soil, as this study does:</p>
-<p><a href="https://www.tandfonline.com/doi/pdf/10.1080/00380768.2013.802643">Spatial estimation of surface soil texture using remote sensing data (tandfonline.com)</a></p>
-<p>And using texture for feature classification when spectral data may be unreliable:</p>
-<p><a href="https://www.isprs.org/proceedings/XXXV/congress/comm4/papers/508.pdf">Microsoft Word - paperISPRS_04.doc</a> (PULL THE TABLE OUT MAYBE?)</p>
 </section>
 <section id="reflections" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">4.3</span> Reflections</h2>
 <p>I’ve skirted around corrections here and focused on enhancement, probably because enhancement feels exciting and interesting (they let you draw out interesting features of the data) whereas corrections feel painstaking and time-consuming. I know they’re important, but it’s also really exciting to put PCA into use (even if my example above is pretty trivial and doesn’t really offer much more than a grayscale map of Cape Town).</p>
-<p>I first encountered PCA last term in the Foundations of Spatial Data Science module. At the time I found it completely intimidating and had to really work in order to understand it. Now I think I get it conceptually (although performing the linear algebra is probably beyond me), and it’s fun to be able to use it and understand how and why it’s useful. Similarly, I had never encountered texture analysis before, but it’s really interesting to learn about its uses in other disciplines (like medical imaging) and to start to get a sense of its value when applied to remote sensing imagery.</p>
+<p>I first encountered PCA last term in the Foundations of Spatial Data Science module. At the time I found it completely intimidating and had to really work in order to understand it. Now I think I get it conceptually (although performing the linear algebra used to transform the dimensionality reduction is beyond me), and it’s fun to be able to use it and understand how and why it’s useful.</p>
+<p>Similarly, I had never encountered texture analysis before, but it’s really interesting to learn about its uses in other disciplines (like medical imaging) and to start to get a sense of its value when applied to remote sensing imagery.</p>
+<p>This week also made me realise how computationally intensive working with remote sensing data is: these files are big (I don’t want to think about how much hard drive space I’ve used in these first three weeks) and PCA took so long to perform that I ended up just going for a run while my computer finished the process. I’m looking forward to getting into Google Earth Engine when a lot of this will be sped up dramatically.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">

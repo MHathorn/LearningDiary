@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week 1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1</span></a>
+  <a href="./week 1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -185,12 +185,11 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="6"><span class="header-section-number">6</span> Week 5: Google Earth Engine</h1>
 <section id="summary" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
-<p>This week we dived into Google Earth Engine, which has dramatically accelerated the field of remote sensing. I have to say that it was a relief to start using Earth Engine – I found the process of having to manually download and process images in SNAP or QGIS cumbersome and time-consuming. That’s the main advantage of Earth Engine: the fact that it dramatically reduces processing time and eases computational resources.</p>
-<p>This week we covered “reducing” – essentially, aggregation functions to provide a particular value (such as the median) for each pixel, as well as linear regression and spatial joins. We also ran PCA, which was eye-opening after week three when I ran PCA in R. Then I started the process and went out for a run to let it finish. This time, it just ran easily in a few seconds:</p>
-<p><strong>Insert video here</strong></p>
-<p>And here’s the NDVI for Cape Town using landsat imagery from <strong>XX to XX</strong>. I think that this has returned a significantly better result than the NDVI measure I calculated in Week 3: Here, the highest values are on table mountain and in the mountainous area in the Southeast – these are nature reserves covered in indigenous fynbos vegetation. There’s also a scar visible in Cape Point, the Southwestern peninsula, from a <a href="https://www.sapeople.com/2018/03/02/photos-cape-point-fire-south-africa/">fire</a> that occurred at the peak of the drought in 2018:</p>
+<p>This week we dived into Google Earth Engine, which has dramatically accelerated the field of remote sensing. I have to say that it was a relief to start using Earth Engine – I found the process of having to manually download and process images in SNAP or QGIS quite cumbersome and time-consuming. That’s the main advantage of Earth Engine: the fact that it dramatically reduces processing time and eases computational resources.</p>
+<p>This week we covered “reducing” – essentially, aggregation functions to provide a particular value (such as the median) for each pixel, as well as linear regression and spatial joins. We also ran PCA, which was eye-opening after week three when I ran PCA in R. This time, it ran in a few seconds.</p>
+<p>Anyway, here’s the NDVI for Cape Town using landsat imagery from January 2022. I think that this has returned a better result than the NDVI measure I calculated in Week 3: Here, the highest values are on table mountain and in the mountainous area in the Southeast – these are nature reserves covered in indigenous fynbos vegetation. There’s also a scar visible in Cape Point, the Southwestern peninsula, from a <a href="https://www.sapeople.com/2018/03/02/photos-cape-point-fire-south-africa/">fire</a> that occurred at the peak of the drought in 2018:</p>
 <p><img src="images/NDVI_GEE.jpg" class="img-fluid"></p>
-<p>And the GLCM texture measure from the same imagery:</p>
+<p>And here is the GLCM texture measure from the same imagery = this looks to be highlighting high reflectance areas like industrial activity, informal areas, and that same scar from the fire:</p>
 <p><img src="images/GLCM_GEE.jpg" class="img-fluid"></p>
 <p>And finally the first principal component from PCA:</p>
 <p><img src="images/PC1_GEE.jpg" class="img-fluid"></p>
@@ -202,25 +201,18 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/amani7-3021052-large.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">GEE applications</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Google Earth Engine applications (<a href="https://ieeexplore.ieee.org/document/9184118">IEEE Xplore</a>)</figcaption><p></p>
 </figure>
 </div>
-<p>https://ieeexplore.ieee.org/document/9184118</p>
 <p>Earth Engine has made planetary-scale analysis and monitoring of all sorts of phenomena possible. One example is <a href="https://www.globalforestwatch.org/map/?map=eyJjZW50ZXIiOnsibGF0IjotMS44NDE2OTQwNDcwNjQzNDA0LCJsbmciOjE3LjQ0ODQ0MTc4MTA2NzQ5fX0%3D&amp;mapPrompts=eyJvcGVuIjp0cnVlLCJzdGVwc0tleSI6InN1YnNjcmliZVRvQXJlYSJ9">Global Forest Watch</a>, where you can easily view changes in tree cover for the entire planet at a range of temporal scales.</p>
 <p>One area that I think is really interesting is the way Earth Engine has opened up the use of near real-time remotely sensed data. An example is <a href="https://species.mol.org/species/map/Perdix_dauurica">Map of Life</a>, which predicts the locations for habitats of endangered species using Earth Engine. The map is updated on-the-fly as new data comes in.</p>
-<p><strong>Damage assessment?</strong></p>
-<p>One area that’s limited is that it’s not possible to use SAR phase data for INSAR analysis in Earth Engine – I believe because the data structure is too complicated <strong>CHECK.</strong> That’s quite frustrating, because I think it would be really interesting to use phase data (which monitors the change in a radio wave’s phase instead of amplitude) to monitor changes in height in informal settlements. There’s been a lot of informal vertical densification in Cape Town over the last few years, and using SAR phase data to monitor the change in height would be an interesting way to understand and quantify the extent of this. That’s not to say it wouldn’t be possible to do this, but one would have to use SNAP or similar software in order to do it with phase data at the moment.</p>
+<p>Sadly, an aspect of Earth Engine that is limited is that it’s not possible to use SAR phase data for InSAR analysis in Earth Engine<strong>.</strong> That’s quite frustrating, because I think it would be really interesting to use phase data (which uses the change in a radio wave’s phase instead of amplitude) to monitor changes in height in informal settlements. There’s been a lot of informal vertical densification in Cape Town over the last few years, and using SAR phase data to monitor the change in height over time would be an interesting way to understand and quantify the extent of this. That’s not to say it wouldn’t be possible to do this, but one would have to use SNAP or similar software in order to do it with phase data at the moment.</p>
 </section>
 <section id="reflections" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">6.3</span> Reflections</h2>
 <p>Earth engine is really fun! I have to be honest and admit that I’ve been waiting most of the module to get into it. I like how easy to use it is, and the fact that you can get straight into working with analysis-ready data. I was worried about using Javascript at first, but the amount of Javascript you need is not too extensive, and there is a wealth of tutorials out there. There are some things that I find peculiar – like the fact that you can’t run code chunks and have to run the whole script every time – but I think that’s just part of learning and adapting.</p>
 <p>It’s also strange how simple things like adding a legend turn out to be quite difficult in Earth Engine. It’s possible, but it involves a lot of extra work and an additional script for each legend, so I’ve left them out for my outputs in this learning diary (my apologies in advance for this).</p>
-<p>I guess the biggest systemic risk with Earth Engine is that Google could decide to pull the product at any time. At the moment it seems too good to be true – it’s such a powerful service, and it’s completely free for individual users. That doesn’t seem like a sustainable business model for Google, and I suspect that it’s a matter of time before they start charging for access. Until then, I’ll continue to enjoy using it…</p>
-<p>Analysis ready data?</p>
-<p>Easy to use - removes barriers to entry</p>
-<p>Javascript?</p>
-<p>Risks: Google takes away (ie GSV?)</p>
-<p>Limitations: lack of phase data, aggregates of some information (ie night lights)</p>
+<p>I guess the biggest systemic risk with Earth Engine is that Google could decide to pull the product at any time. At the moment it seems too good to be true – it’s such a powerful service, and it’s completely free for individual users. That doesn’t seem like a sustainable business model for Google, and I suspect that it’s a matter of time before they start charging for access. Until then, I’ll continue to enjoy using it.</p>
 
 
 </section>

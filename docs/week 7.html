@@ -119,7 +119,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week 1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1</span></a>
+  <a href="./week 1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -234,36 +234,22 @@ div.csl-indent {
 </section>
 <section id="accuracy" class="level3" data-number="8.1.3">
 <h3 data-number="8.1.3" class="anchored" data-anchor-id="accuracy"><span class="header-section-number">8.1.3</span> Accuracy</h3>
-<p>There are a number of ways to measure the accuracy of a model in remote sensing and machine learning. Which measure (or combination of measures) you choose depends on the application.</p>
-<p>Binary confusion matrix</p>
-<p>Users accuracy/precision</p>
-<p>Producer’s accuracy (recall)</p>
-<p>F1 Score</p>
-<p>ROC Score</p>
-<p>Train test split</p>
-<p>CV</p>
-<p>WATCH OUT FOR SPATIAL AUTOCORRELATION IN REMOTELY SENSED DATA - need to keep training and testing data far apart</p>
-<p><img src="images/image-1098293457.png" class="img-fluid"></p>
+<p>There are a number of ways to measure the accuracy of a model in remote sensing and machine learning. Which measure (or combination of measures) you choose depends on the application, but some of the most common are user's accuracy, producer's accuracy and F1 score. These are all derived from a confusion matrix – basically, a table that shows the number of correctly and incorrectly classified pixels for each class.</p>
+<p><strong>The user's accuracy is the proportion of pixels that are correctly classified as a class out of all pixels that are classified as that class. It indicates how reliable the classification map is for a given class.</strong></p>
+<p><strong>The producer's accuracy is the proportion of pixels that are correctly classified as a class out of all pixels that belong to that class in reality. It indicates how well the classification map represents a given class.</strong></p>
+<p><strong>The f1 score is the harmonic mean of user's accuracy and producer's accuracy for a class. It balances both measures and gives a single value to evaluate the performance of a class.</strong></p>
 </section>
 </section>
 <section id="applications" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">8.2</span> Applications</h2>
-<p>Advanced classification methods for land use and land cover have really moved to the next level recently. <span class="citation" data-cites="brownDynamicWorldRealtime2022">Brown et al. (<a href="references.html#ref-brownDynamicWorldRealtime2022" role="doc-biblioref">2022</a>)</span> created a model that updates global land use and land cover in near real-time. They use a deep learning to do it, and it’s hosted on Earth Engine – you can take a look <a href="https://dynamicworld.app/explore">here</a>.</p>
+<p>Advanced classification methods for land use and land cover have really expanded recently. <span class="citation" data-cites="brownDynamicWorldRealtime2022">Brown et al. (<a href="references.html#ref-brownDynamicWorldRealtime2022" role="doc-biblioref">2022</a>)</span> created a model that updates global land use and land cover in near real-time. They use a deep learning algorithm to do it, and it’s hosted on Earth Engine – you can take a look <a href="https://dynamicworld.app/explore">here</a>.</p>
 <p>Elsewhere, sub-pixel analysis has been used for urban inundation mapping (essentially, maps of flooded areas in cities). <span class="citation" data-cites="liSpatialAttractionModels2020">Li et al. (<a href="references.html#ref-liSpatialAttractionModels2020" role="doc-biblioref">2020</a>)</span> use deep learning in combination wiht Elman neural networks for sub-pixel analysis to improve the accuracy of flood mapping using Landsat imagery.</p>
 <p>Elsewhere, Object-Based Image Analysis has recently been used to map informal settlements by <span class="citation" data-cites="matariraObjectBasedInformalSettlement2022">Matarira et al. (<a href="references.html#ref-matariraObjectBasedInformalSettlement2022" role="doc-biblioref">2022</a>)</span>. They used both optical imagery from Sentinel-2 and Planetscope, along with SAR data from Sentinel-1, to identify informal settlements in Durban, South Africa.</p>
-<p>Change detection?</p>
-<p>OBIA: <a href="https://www.sciencedirect.com/science/article/pii/S0924271609000884">Object based image analysis for remote sensing - ScienceDirect</a></p>
-<p>NASA urban image classification:</p>
-<p><a href="https://ntrs.nasa.gov/citations/20140012911">Urban Image Classification: Per-Pixel Classifiers, Sub-Pixel Analysis, Object-Based Image Analysis, and Geospatial Methods - NASA Technical Reports Server (NTRS)</a></p>
-<p><a href="https://www.mdpi.com/journal/remotesensing/special_issues/Sub-pixel_Processing">Remote Sensing | Special Issue : New Advances on Sub-pixel Processing: Unmixing and Mapping Methods (mdpi.com)</a></p>
-<p><a href="https://www.mdpi.com/journal/remotesensing/special_issues/OBIA_RS">Remote Sensing | Special Issue : Object Based Image Analysis for Remote Sensing (mdpi.com)</a></p>
 </section>
 <section id="reflections" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">8.3</span> Reflections</h2>
-<p>It’s quite incredible to see how quickly the possibilities of remote sensing are expanding. Google Earth Engine has really opened up the possibilities, and it feels like there’s been a real explosion in the discipline in recent years. I think this is both exciting and intimidating: these recent advances are so significant, and have such obvious utility, that it feels really exciting to be able to understand and undertake some of them. The paper that I described above that identifies informal settlements in Durban, for example, employs methods that I have learnt on this course and it doesn’t feel like a huge stretch for me to be able to do something similar.</p>
-<p>At the same time, I feel like I’m just scratching the surface – and the world of possibilities is really dizzying. I theoretically understand most of what <span class="citation" data-cites="liSpatialAttractionModels2020">Li et al. (<a href="references.html#ref-liSpatialAttractionModels2020" role="doc-biblioref">2020</a>)</span> have done for inundation mapping, although it’s a stretch, but the deep learning methods (and data infrastructure and pipelines) employed by <span class="citation" data-cites="brownDynamicWorldRealtime2022">Brown et al. (<a href="references.html#ref-brownDynamicWorldRealtime2022" role="doc-biblioref">2022</a>)</span> are just dizzying. I guess it’s cool that I can really appreciate it now, at least, and I’m really pleased that I’ve started to gain some real applied insight into how to use remote sensing data – because I really think it has incredibly powerful applications for cities.</p>
-<p>Different applications of methods we have learnt elsewhere</p>
-<p>Accuracy measures - enjoy producers/users</p>
+<p>It’s quite incredible to see how quickly the possibilities of remote sensing are expanding. Google Earth Engine has really opened up the possibilities, and it feels like there’s been a real explosion in the discipline in recent years. I think this is both exciting and intimidating: these recent advances are so significant, and have such obvious utility, that it feels really exciting to be able to understand and undertake some of them. The paper that I described above that identifies informal settlements in Durban, for example, employs methods that I have learnt on this course and it doesn’t feel like a massive stretch for me to be able to do something similar.</p>
+<p>At the same time, I feel like I’m just scratching the surface – and the world of possibilities is really dizzying. I theoretically understand what <span class="citation" data-cites="liSpatialAttractionModels2020">Li et al. (<a href="references.html#ref-liSpatialAttractionModels2020" role="doc-biblioref">2020</a>)</span> have done for inundation mapping, although it’s a stretch, but the deep learning methods (and data infrastructure and pipelines) employed by <span class="citation" data-cites="brownDynamicWorldRealtime2022">Brown et al. (<a href="references.html#ref-brownDynamicWorldRealtime2022" role="doc-biblioref">2022</a>)</span> are just dizzying. I guess it’s cool that I can really appreciate it now, at least, and I’m really pleased that I’ve started to gain some real applied insight into how to use remote sensing data – because I really think it has incredibly powerful applications for cities.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
