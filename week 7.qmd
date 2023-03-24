@@ -27,15 +27,22 @@ In order to formally assess the accuracy I would need to split the data into a t
 
 ### Accuracy
 
-There are a number of ways to measure the accuracy of a model in remote sensing and machine learning. Which measure (or combination of measures) you choose depends on the application, but some of the most common are user\'s accuracy, producer\'s accuracy and F1 score. These are all derived from a confusion matrix -- basically, a table that shows the number of correctly and incorrectly classified pixels for each class.
+There are a number of ways to measure the accuracy of a model in remote sensing and machine learning. Which measure (or combination of measures) you choose depends on the application, but some of the most common are user's accuracy, producer's accuracy and F1 score. These are all derived from a confusion matrix -- basically, a table that shows the number of correctly and incorrectly classified pixels for each class.
 
-**The user\'s accuracy is the proportion of pixels that are correctly classified as a class out of all pixels that are classified as that class. It indicates how reliable the classification map is for a given class.**
+The **user's accuracy** is the proportion of pixels that are correctly classified as a class out of all pixels that are classified as that class. It indicates how reliable the classification map is for a given class. It's also called **precision,** and it's calculated as follows:
 
-**The producer\'s accuracy is the proportion of pixels that are correctly classified as a class out of all pixels that belong to that class in reality. It indicates how well the classification map represents a given class.**
+$$User's\ Accuracy= \frac{True\ Positive}{True\ Positive+False\ Positive}$$
 
-**The f1 score is the harmonic mean of user\'s accuracy and producer\'s accuracy for a class. It balances both measures and gives a single value to evaluate the performance of a class.**
+The **producer's accuracy** is the proportion of pixels that are correctly classified as a class out of all pixels that belong to that class in reality. It indicates how well the classification map represents a given class. It's also called **recall,** and it's calculated like this:
 
-## Applications
+$$Producer's\ Accuracy= \frac{True\ Positive}{True\ Positive+False\ Negative}$$
+
+The **f1 score** is the harmonic mean of user's accuracy and producer's accuracy for a class. It balances both measures and gives a single value that balances both. It's calculated like this:
+
+$$F1= \frac{2 * User's\ Accuracy * Producer's\ Accuracy}{User's\ Accuracy + Producer's\ Accuracy}$$
+
+## 
+Applications
 
 Advanced classification methods for land use and land cover have really expanded recently. @brownDynamicWorldRealtime2022 created a model that updates global land use and land cover in near real-time. They use a deep learning algorithm to do it, and it's hosted on Earth Engine -- you can take a look [here](https://dynamicworld.app/explore).
 
